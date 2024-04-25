@@ -1,19 +1,29 @@
+@import '/src/styles/_config.sass'
+
 .Header
+  // background-color: rgba(red, 0.1)
   position: relative
-  padding-top: 2em
-  padding-bottom: 2em
+  z-index: 50
+  display: flex
+  +space--sm
   &__container
-    position: relative
+    +container
   &__row
+    position: relative
     display: flex
+    justify-content: space-between
     align-items: center
   &__logo
+    +reset-anchor
     position: relative
+    height: 44px
     display: inline-flex
-    text-decoration: none
-    padding: 0.25em .5em
-    &:hover
-      text-decoration: none
+    align-items: center
+    &__svg
+      height: 14px
+
   &__navigation
-    flex-grow: 1
-    margin-left: 2em
+    flex: 1
+    display: flex
+    justify-content: flex-end
+    align-items: center

@@ -1,17 +1,63 @@
+@import '/src/styles/_config.sass'
+
 .Navigation
   position: relative
+  $root: &
   &__list
+    +reset-list
     display: flex
-    list-style: none
-    margin: 0
-    padding: 0
+    align-items: stretch
   &__item
+    +reset-list
+    display: flex
+    align-items: center
+    transition: none $speed*3 ease
+    transition-property: margin-right
     &:not(:last-child)
-      margin-right: 2em
-    a
-      position: relative
-      display: inline-flex
+      margin-right: 1.6em
+      +tablet
+        margin-right: 2.2em
+    &:last-child
+      #{$root}__link
+        background-color: $primary
+        color: $white
+        padding-left: 1.1428571429em
+        padding-right: 1.1428571429em
+        border-radius: 1.1428571429em
+        transition: none $speed*3 ease
+        transition-property: background-color, width
+        &:hover
+          background-color: darken($primary, 10%)
+
+  &__link
+    +reset-anchor
+    position: relative
+    display: inline-flex
+    align-items: center
+    color: $black
+    font-weight: 500
+    text-transform: uppercase
+    +copy--xs
+    height: 2.2857142857em
+    transition: none $speed*3 ease
+    transition-property: padding-left, padding-right
+    +tablet
+      padding-left: 0.7142857143em
+      padding-right: 0.7142857143em
+
+    &:hover
       text-decoration: none
-      padding: 0.25em .5em
-      &:hover
-        text-decoration: none
+
+    &:global.active
+      &::before
+        content: ""
+        position: absolute
+        bottom: 0
+        left: 50%
+        margin-left: -2px
+        width: 4px
+        height: 4px
+        border-radius: 2px
+        background-color: $primary
+        +tablet
+          margin-bottom: -10px

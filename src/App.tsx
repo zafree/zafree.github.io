@@ -9,9 +9,11 @@ import Navigation from './components/navigation/Navigation'
 // Routes
 import Home from './pages/home/Home'
 import About from './pages/about/About'
-import Contact from './pages/contact/Contact'
+import NotFound from './pages/not-found/NotFound'
 
 import './App.module.sass'
+import Work from './pages/work/Work'
+import Hire from './pages/hire/Hire'
 
 function App() {
   return (
@@ -20,15 +22,18 @@ function App() {
         <Header>
           <Navigation>
             <NavLink to="/">Home</NavLink>
+            <NavLink to="work">Work</NavLink>
             <NavLink to="about">About</NavLink>
-            <NavLink to="contact">Contact</NavLink>
+            <NavLink to="hire">Hire me</NavLink>
           </Navigation>
         </Header>
         <Content>
           <Routes>
             <Route index element={<Home />} />
+            <Route path="work" element={<Work />} />
             <Route path="about" element={<About />} />
-            <Route path="contact" element={<Contact />} />
+            <Route path="hire" element={<Hire />} />
+            <Route path="*" element={<NotFound />} />
           </Routes>
         </Content>
       </AppLayout>

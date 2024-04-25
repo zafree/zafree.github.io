@@ -1,0 +1,118 @@
+// Breakpoints
+
+=tablet
+  @media screen and (min-width: $tablet)
+    @content
+
+=laptop
+  @media screen and (min-width: $laptop)
+    @content
+
+=widescreen
+  @media screen and (min-width: $widescreen)
+    @content
+
+// container 
+
+=container
+  // background-color: rgba(blue, 0.1)
+  position: relative
+  width: 100%
+  min-height: 1px
+  margin-right: auto
+  margin-left: auto
+  padding-right: $gutter
+  padding-left: $gutter
+  transition: none $speed*3 ease
+  transition-property: padding-left, padding-right
+  +tablet
+    // background-color: rgba(yellow, 0.1)
+    padding-right: $tablet-gutter
+    padding-left: $tablet-gutter
+  +laptop
+    // background-color: rgba(green, 0.1)
+    max-width: $max-width
+    padding-right: $laptop-gutter
+    padding-left: $laptop-gutter
+  +widescreen
+    // background-color: rgba(red, 0.1)
+
+// mofifires 
+// --content --blog
+
+=container--content
+  +tablet
+    max-width: 720px + ($tablet-gutter * 2)
+  +laptop
+    max-width: 990px + ($laptop-gutter * 2)
+
+=container--blog
+  max-width: 620px + ($gutter)
+  +tablet
+    max-width: 620px + ($tablet-gutter * 2)
+  +laptop
+    max-width: 620px + ($laptop-gutter * 2)
+
+// input
+
+=placeholder
+  $placeholders: ':-moz' ':-webkit-input' '-moz' '-ms-input'
+  @each $placeholder in $placeholders
+    &:#{$placeholder}-placeholder
+      @content
+
+// space
+
+=space--hero
+  padding-top: $gutter * 2
+  padding-bottom: $gutter
+  transition: none $speed*3 ease
+  transition-property: padding-top, padding-bottom
+  +tablet
+    padding-top: $tablet-gutter * 2
+    padding-bottom: $tablet-gutter
+  +laptop
+    padding-top: $laptop-gutter * 2
+    padding-bottom: $laptop-gutter
+
+=space--base
+  padding-top: $gutter
+  padding-bottom: $gutter
+  +tablet
+    padding-top: $tablet-gutter
+    padding-bottom: $tablet-gutter
+  +laptop
+    padding-top: $laptop-gutter
+    padding-bottom: $laptop-gutter
+
+=space--lg
+  padding-top: $gutter * 2
+  padding-bottom: $gutter * 2
+  +tablet
+    padding-top: $tablet-gutter * 2
+    padding-bottom: $tablet-gutter * 2
+  +laptop
+    padding-top: $laptop-gutter * 2
+    padding-bottom: $laptop-gutter * 2
+
+=space--sm
+  padding-top: $gutter * .5
+  padding-bottom: $gutter * .5
+  transition: none $speed*3 ease
+  transition-property: padding-top, padding-bottom
+  +tablet
+    padding-top: $gutter
+    padding-bottom: $gutter
+  +laptop
+    padding-top: $gutter * 1.25
+    padding-bottom: $gutter * 1.25
+
+// clearfix 
+
+=clearfix
+  &:before,
+  &:after
+    content: ""
+    display: table
+  &:after
+    clear: both

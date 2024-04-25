@@ -1,0 +1,157 @@
+// Set fluid font size using calc()
+// example: calc(36px + (52 - 36) * ((100vw - 375px) / (1200 - 375)))
+// target: calc(vw + em)
+
+@use 'sass:math'
+
+@function strip-unit($value)
+  @return math.div($value, ($value * 0 + 1))
+
+=ffs($fs-max, $fs-min, $w-max: strip-unit($laptop), $w-min: strip-unit($phone))
+  font-size: calc(($fs-max - $fs-min) * 100vw / ($w-max - $w-min) + (($fs-min * .1em) - ($fs-max - $fs-min) * ($w-min * .1em) / ($w-max - $w-min)))
+
+// Heading
+// IBM Plex Serif : 200 300 400
+
+=heading
+  font-family: $family-serif
+  font-weight: 400
+  line-height: $heading-line-height
+  letter-spacing: -0.025em
+  margin-bottom: 0.09615em
+  padding-right: 1em
+  +tablet
+    font-weight: 300
+
+=subheading
+  font-family: $family-serif
+  font-weight: 300
+  line-height: $heading-line-height
+  letter-spacing: -0.035em
+  color: $gray
+  margin-bottom: .6em
+  padding-right: 1em
+  max-width: 14em
+  +tablet
+    font-weight: 200
+    max-width: 20em
+  a
+    text-decoration-thickness: 0.05em
+    display: inline-block
+
+// Title
+// National2 : 500 400
+
+=title
+  line-height: $title-line-height
+  font-weight: 500
+  font-size: $body-size * 1.083333333333333
+  // padding-top: 0.666666666666667em
+  margin-top: 0.923076923076923em
+  +ffs(30, 26)
+  +laptop
+    font-size: $body-size * 1.25
+
+=subtitle
+  line-height: $title-line-height
+  letter-spacing: -0.01em
+  font-weight: 400
+  color: $gray
+  font-size: $body-size
+  +ffs(28, 24)
+  +laptop
+    font-size: $body-size * 1.1666666666666
+
+// Paragraph
+// National2 : 300 300i 400 500
+
+=copy
+  line-height: $body-line-height
+  color: $niro
+  margin-top: 1.28333em
+  margin-bottom: 1.28333em
+
+$min_font: 21px
+$max_font: 24px
+$min_viewport_width: 375px
+$max_viewport_width: 1200px
+
+=copy--base
+  letter-spacing: -0.01em
+  font-size: $body-size * 0.875
+  +ffs(24, 21)
+  +laptop
+    font-size: $body-size
+
+=copy--lg
+  // margin-bottom: 1.07143em
+  font-weight: 300
+  font-style: italic
+  line-height: $quote-line-height
+  font-size: $body-size
+  +ffs(28, 24)
+  +laptop
+    font-size: $body-size * 1.1666666666666
+
+=copy--md
+  font-size: $body-size * 0.75
+  +ffs(21, 18)
+  +laptop
+    font-size: $body-size * 0.875
+
+=copy--sm
+  font-size: $body-size * 0.666666666666667
+  +ffs(18, 16)
+  +laptop
+    font-size: $body-size * 0.75
+
+=copy--xs
+  font-size: $body-size * 0.583333333333333
+  letter-spacing: .015em
+
+=copy--xxs
+  font-size: $body-size * 0.5
+  letter-spacing: .015em
+
+// mofifires --hero --second
+// fluid font size :: +ffs(max-fint-size, min-font-size)
+
+=heading--hero
+  +heading
+  font-size: $body-size * 1.5
+  // padding-right: 1em
+  +ffs(52, 36)
+  +laptop
+    font-size: $body-size * 2.16666666666
+
+=subheading--hero
+  +subheading
+  font-size: $body-size
+  // padding-right: 1em
+  // max-width: 14em
+  +ffs(50, 24)
+  +tablet
+    // max-width: 20em
+  +laptop
+    font-size: $body-size * 2.08333333333
+
+=copy--hero
+  +copy
+  +copy--md
+  max-width: 25em
+  a
+    display: inline-block
+
+=heading--second
+  +heading
+  font-size: $body-size * 1.5
+  +ffs(44, 36)
+  +laptop
+    font-size: 4.4em
+
+=subheading--second
+  +subheading
+  font-size: $body-size
+  +ffs(42, 24)
+  +laptop
+    font-size: 4.2em

@@ -1,0 +1,98 @@
+html
+  background-color: $body-background
+  font-size: 16px
+  -webkit-overflow-scrolling: touch
+  -moz-osx-copy--smoothing: grayscale
+  -webkit-copy--smoothing: antialiased
+  -webkit-copy--smoothing: subpixel-antialiased
+  overflow-x: hidden
+  overflow-y: scroll
+  text-rendering: $body-rendering
+  -ms-text-size-adjust: 100%
+  -webkit-text-size-adjust: 100%
+  height: 100%
+  &.isScrollDisabled
+    body
+      height: 100vh
+      overflow: hidden
+
+body
+  font-family: $body-family
+  color: $body-text
+  font-size: 62.5%
+  font-weight: $body-weight
+  line-height: $body-line-height
+
+._kErnel
+  display: block
+  position: relative
+
+article,
+aside,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section
+  display: block
+
+ul,
+ol
+  margin: 0
+  padding-left: 1.3em
+  list-style-position: outside
+  li
+    margin: 0
+    padding: 0.4em 0
+    &::marker
+      color: $primary
+  ul
+    li:last-child
+      padding-bottom: 0
+
+ul
+  list-style-type: disc
+  ul
+    list-style-type: circle
+    ul
+      list-style-type: disc
+      ul
+        list-style-type: circle
+
+a
+  color: inherit
+  text-decoration: underline
+  text-decoration-color: inherit
+  // text-decoration-thickness: 0.1em
+  &:hover
+    text-decoration: underline
+    // text-decoration-thickness: 0.1em
+
+small
+  font-size: 0.533333333333333em
+  font-weight: 400
+
+em
+  font-style: italic
+  font-weight: 300
+
+strong
+  font-weight: 500
+
+.emoji
+  font-family: Apple Color Emoji, Segoe UI Emoji, Noto Color Emoji, Android Emoji, EmojiSymbols, EmojiOne Mozilla, Twemoji Mozilla, Segoe UI Symbol, Noto Color Emoji Compat, emoji, noto-emojipedia-fallback
+  font-weight: 400
+
+pre
+  display: block
+  unicode-bidi: embed
+  font-family: monospace
+  white-space: pre
+  background-color: $lighter
+  padding: 2em
+  overflow-x: scroll
+  &::-webkit-scrollbar
+    -webkit-appearance: none
+    display: none
