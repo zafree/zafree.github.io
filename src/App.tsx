@@ -11,7 +11,6 @@ import Home from './pages/home/Home'
 import About from './pages/about/About'
 import NotFound from './pages/not-found/NotFound'
 
-import './App.module.sass'
 import Work from './pages/work/Work'
 import Hire from './pages/hire/Hire'
 
