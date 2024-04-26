@@ -1,4 +1,4 @@
-import { BrowserRouter, NavLink, Route, Routes } from 'react-router-dom'
+import { NavLink, Route, Routes } from 'react-router-dom'
 
 // Layout
 import AppLayout from './components/app-layout/AppLayout'
@@ -16,27 +16,25 @@ import Hire from './pages/hire/Hire'
 
 function App() {
   return (
-    <BrowserRouter>
-      <AppLayout>
-        <Header>
-          <Navigation>
-            <NavLink to="/">Home</NavLink>
-            <NavLink to="work">Work</NavLink>
-            <NavLink to="about">About</NavLink>
-            <NavLink to="hire">Hire me</NavLink>
-          </Navigation>
-        </Header>
-        <Content>
-          <Routes>
-            <Route index element={<Home />} />
-            <Route path="work" element={<Work />} />
-            <Route path="about" element={<About />} />
-            <Route path="hire" element={<Hire />} />
-            <Route path="*" element={<NotFound />} />
-          </Routes>
-        </Content>
-      </AppLayout>
-    </BrowserRouter>
+    <AppLayout>
+      <Header>
+        <Navigation>
+          <NavLink to="/">Home</NavLink>
+          <NavLink to="work">Work</NavLink>
+          <NavLink to="about">About</NavLink>
+          <NavLink to="hire">Hire me</NavLink>
+        </Navigation>
+      </Header>
+      <Content>
+        <Routes>
+          <Route index element={<Home />} />
+          <Route path="work" element={<Work />} />
+          <Route path="about" element={<About />} />
+          <Route path="hire" element={<Hire />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </Content>
+    </AppLayout>
   )
 }
 
