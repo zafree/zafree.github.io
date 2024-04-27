@@ -1,15 +1,13 @@
-import Button from '../button/Button'
-
-import { IHeader } from '../../api/interface/IHeader'
-
+import { IHeader } from '@/api/interface/IHeader'
 import s from './Header.module.sass'
+import Link from 'next/link'
 
 function Header(props: IHeader) {
   return (
     <header className={s.Header}>
       <div className={s.Header__container}>
         <div className={s.Header__row}>
-          <Button className={s.Header__logo} to="/">
+          <Link className={s.Header__logo} href="/">
             <svg
               className={s.Header__logo__svg}
               xmlns="http://www.w3.org/2000/svg"
@@ -20,7 +18,7 @@ function Header(props: IHeader) {
                 transform="translate(-0.621 18.225)"
               />
             </svg>
-          </Button>
+          </Link>
           <div className={s.Header__navigation}>{props.children}</div>
         </div>
       </div>
