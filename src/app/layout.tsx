@@ -4,6 +4,7 @@ import Header from '@/components/header/Header'
 import Navigation from '@/components/navigation/Navigation'
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 
 import './layout.sass'
 // import { Inter } from "next/font/google";
@@ -26,10 +27,10 @@ export default function RootLayout({
         <AppLayout>
           <Header>
             <Navigation>
-              <Link href=".">Home</Link>
-              <Link href="work">Work</Link>
-              <Link href="about">About</Link>
-              <Link href="hire">Hire</Link>
+              <Link href="/">Home</Link>
+              <Link href="/work">Work</Link>
+              <Link href="/about">About</Link>
+              <Link href="/hire">Hire me</Link>
             </Navigation>
           </Header>
           <Content>{children}</Content>
