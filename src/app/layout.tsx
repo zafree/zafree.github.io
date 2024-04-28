@@ -4,12 +4,11 @@ import Header from '@/components/header/Header'
 import Navigation from '@/components/navigation/Navigation'
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { usePathname } from 'next/navigation'
 
 import './layout.sass'
-// import { Inter } from "next/font/google";
+// import { Inter } from 'next/font/google'
 
-// const inter = Inter({ subsets: ["latin"] });
+// const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: 'Zafree',

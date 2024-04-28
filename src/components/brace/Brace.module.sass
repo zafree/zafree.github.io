@@ -1,0 +1,23 @@
+@import "@/styles/_config.sass"
+
+.Brace
+  +copy
+  +copy--md
+  position: relative
+  display: inline-block
+  padding: .45em 1.1em
+  &__icon
+    aspect-ratio: 18 / 52
+    height: 100%
+    position: absolute
+    top: 0
+    fill: $svg
+    &:first-child
+      left: 0
+    &:last-child
+      right: 0
+  &__label
+    max-width: 27em
+
+.this
+  background-color: rgba($primary, 0.3)

@@ -1,4 +1,5 @@
 import { Metadata } from 'next'
+import Hero from '@/components/hero/Hero'
 
 export const metadata: Metadata = {
   title: 'About. Zafree.',
@@ -6,7 +7,16 @@ export const metadata: Metadata = {
 }
 
 function page() {
-  return <h1>About</h1>
+  return (
+    <>
+      <Hero
+        kicker={'About me'}
+        title={'I’m Zafree.'}
+        subtitle={'Glad you’re stalking me finally'}
+      />
+      <div className="box"></div>
+    </>
+  )
 }
 
 export default page

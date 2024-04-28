@@ -1,3 +1,4 @@
+import Hero from '@/components/hero/Hero'
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
@@ -6,7 +7,16 @@ export const metadata: Metadata = {
 }
 
 function page() {
-  return <h1>Work</h1>
+  return (
+    <>
+      <Hero
+        kicker="My work"
+        title="Insights into my work"
+        subtitle="Such panic zone"
+      />
+      <div className="box"></div>
+    </>
+  )
 }
 
 export default page
