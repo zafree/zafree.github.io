@@ -6,9 +6,9 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 
 import './layout.sass'
-// import { Inter } from 'next/font/google'
 
-// const inter = Inter({ subsets: ['latin'] })
+import { sans, serif } from '@/fonts/fonts'
+import c from 'classnames'
 
 export const metadata: Metadata = {
   title: 'Zafree',
@@ -22,7 +22,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>
+      <body className={c(sans.variable, serif.variable)}>
         <AppLayout>
           <Header>
             <Navigation>
