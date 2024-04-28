@@ -6,7 +6,9 @@
   "plugins": ["prettier"],
   "rules": {
     "prettier/prettier": [
-      "error"
+      "error", {
+        "endOfLine":"auto"
+      }
     ]
   },
   "root": true
