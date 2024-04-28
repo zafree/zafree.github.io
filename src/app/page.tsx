@@ -1,11 +1,8 @@
-'use client'
-
 import { useEffect } from 'react'
 import Brace from '@/components/brace/Brace'
 import Hero from '@/components/hero/Hero'
 
 import s from './page.module.sass'
-import Intro from '@/components/Intro/intro'
 function Home() {
   return (
     <>
