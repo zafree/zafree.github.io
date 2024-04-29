@@ -1,8 +1,7 @@
-import { work } from './work'
-import getWorks from './works.json'
+import getWorksData from './works.json'
 
-export function allWorks() {
-  return getWorks
+export function getWorks() {
+  return getWorksData
 }
 
 // export function getWorksSlug(slug: string) {

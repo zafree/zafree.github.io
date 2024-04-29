@@ -1,4 +1,4 @@
-export interface work {
+export interface IWork {
   done?: boolean
   id: number
   slug: string

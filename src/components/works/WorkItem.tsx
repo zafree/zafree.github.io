@@ -1,9 +1,9 @@
 import Link from 'next/link'
-import { work } from '@/api/works/work'
+import { IWork } from '@/api/works/IWork'
 
 import s from './WorkItem.module.sass'
 
-function WorkItem(props: work) {
+function WorkItem(props: IWork) {
   return (
     <>
       <Link className={s.Link} href={`/work/${props.slug}`}>
