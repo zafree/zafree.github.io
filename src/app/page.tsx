@@ -1,4 +1,3 @@
-import { useEffect } from 'react'
 import Brace from '@/components/brace/Brace'
 import Hero from '@/components/hero/Hero'
 
