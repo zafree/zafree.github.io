@@ -4,6 +4,7 @@ import { work } from '@/api/works/work'
 import Link from 'next/link'
 import WorkDetails from '@/components/works/WorkDetails'
 
+
 export async function generateStaticParams() {
   let posts = allWorks()
 
@@ -12,9 +13,8 @@ export async function generateStaticParams() {
   }))
 }
 
-export default function Post({ params }) {
+export default function Post({ params }: { params: { slug: string } }) {
   let post = allWorks().find((post) => post.slug === params.slug)
-
   if (!post) {
     notFound()
   }
