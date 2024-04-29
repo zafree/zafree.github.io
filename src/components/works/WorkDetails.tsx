@@ -1,4 +1,3 @@
-import { work } from '@/api/works/IWork'
 import React from 'react'
 
 function WorkDetails() {
