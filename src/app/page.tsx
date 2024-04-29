@@ -7,7 +7,8 @@ function Home() {
     <>
       <Hero
         title="Independent Design Engineer"
-        subtitle="Hi, I’m Zafree, and I specialize in design, and design implementation.">
+        subtitle="Hi, I’m Zafree, and I specialize in design, and design implementation."
+      >
         <Brace />
       </Hero>
       <div className="box"></div>
