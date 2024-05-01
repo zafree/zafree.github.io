@@ -11,7 +11,7 @@ function Home() {
       >
         <Brace />
       </Hero>
-      <div className="box"></div>
+      {/* <div className="box"></div> */}
     </>
   )
 }
