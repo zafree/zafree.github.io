@@ -1,0 +1,47 @@
+import c from 'classnames'
+import s from './Bpm.module.sass'
+import { Row, Copies, Links } from '@/components/content/Content'
+import Separator from '@/components/separator/Separator'
+
+<Row center>
+  <Separator />
+</Row>
+
+<Row flex>
+  <Copies>
+    # Web design
+
+    I design and develop websites. Today, having an online presence is key. So, 
+    I quickly create a landing page with [*Jekyll*](https://jekyllrb.com/) 
+    and host it on GitHub.
+  </Copies>
+  <Links>
+    * [Check out landing page](https://zafree.github.io/bpm2016/)
+    * [CSS loading animation!](https://codepen.io/zafree/pen/adYEOG)
+  </Links>
+</Row>
+
+<Row>
+  ![](/work/bpm/image1.jpg)
+  <Copies center>
+    <div className={s.animationGrid}>
+      <div className={s.animationGrid__row}>
+        <div className={s.animationGrid__item}>
+          <video src="/work/bpm/video1.mov" autoPlay loop />
+        </div>
+        <div className={c(s.animationGrid__item, s.half)}>
+          <video src="/work/bpm/video2.mov" autoPlay loop />
+        </div>
+        <div className={c(s.animationGrid__item, s.half)}>
+          <video src="/work/bpm/video3.mov" autoPlay loop />
+        </div>
+        <div className={s.animationGrid__item}>
+          <video src="/work/bpm/video4.mov" autoPlay loop />
+        </div>
+        {/* <div className={s.animationGrid__item}>
+          <video src="/work/bpm2016/video5.mov" autoPlay loop />
+        </div> */}
+      </div>
+    </div>
+  </Copies>
+</Row>

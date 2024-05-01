@@ -12,7 +12,15 @@ function WorkItem(props: IWork) {
         className={c(s.Work, props?.done && s.done)}
         to={`/work/${props.slug}`}
       >
-        <div className={s.Work__imageWrap}></div>
+        <div className={s.Work__imageWrap}>
+          <Image
+            className={s.Work__image}
+            width={1280}
+            height={640}
+            src={`/work/${props.slug}/cover.jpg`}
+            alt={`${props.title} cover image`}
+          />
+        </div>
         <div className={s.Work__content}>
           <h3 className={s.Work__heading}>{props.title}</h3>
           <h4 className={s.Work__copy}>{props.desc}</h4>

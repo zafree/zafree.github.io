@@ -2,10 +2,14 @@
 
 .HeroImage
   position: relative
+  margin-bottom: 4em
+  +laptop
+    margin-bottom: 6em
   $root: &
   &__container
     // +container
-    margin: auto
-    max-width: 1880px
+    max-width: $widescreen
+    margin-left: auto
+    margin-right: auto
   &__row
     position: relative
