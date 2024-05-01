@@ -1,8 +1,65 @@
 @import '@/styles/_config.sass'
 
-.Link
-  display: block
-  width: 100%
-  border: 1px solid $lighter
-  padding: $gutter
+.Work
   +reset-anchor
+  // display: block
+  // width: 100%
+  // border: 1px solid $lighter
+  display: flex
+  flex-direction: column
+  width: 100%
+  &:hover
+    text-decoration: none
+  // &.done
+  //   &::before
+  //     content: ""
+  //     position: absolute
+  //     top: 0
+  //     left: 0
+  //     right: 0
+  //     bottom: 0
+  //     background-color: rgba($green, 0.3)
+  //     z-index: 1
+  &__imageWrap
+    background-color: rgba($primary, 0.1)
+    aspect-ratio: 2 / 1
+    position: relative
+    display: inline-flex
+    border-radius: .4em
+    overflow: hidden
+
+  &__content
+    position: relative
+    display: flex
+    flex-direction: column
+    width: 100%
+    padding: 1em 0 0
+  &__heading
+    +copy
+    +copy--sm
+    margin-top: 0.5em
+    margin-bottom: 0
+    margin-right: 4em
+  &__copy
+    +copy
+    +copy--xs
+    margin-top: 0.15em
+    margin-bottom: 0
+    margin-right: 3em
+    color: $gray
+  &__typelist
+    list-style: none
+    padding: 0
+    display: inline-flex
+    max-width: 100%
+    flex-flow: row wrap
+    &__tag
+      +copy
+      +copy--xxs
+      margin-top: 0.9em
+      color: $light
+      margin-bottom: 0
+      &:not(:last-child)
+        &::after
+          content: ","
+          margin-right: 5px

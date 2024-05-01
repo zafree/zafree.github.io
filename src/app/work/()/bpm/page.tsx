@@ -7,7 +7,7 @@ import { usePathname } from 'next/navigation'
 import Post from './post.mdx'
 import Content, { Row, Copies, Links } from '@/components/content/Content'
 
-function BubtIndex() {
+function BPM() {
   const url = usePathname()
   const slug = url.substring(url.lastIndexOf('/') + 1)
   const work = getWorksSlug(slug)
@@ -18,4 +18,4 @@ function BubtIndex() {
   )
 }
 
-export default BubtIndex
+export default BPM

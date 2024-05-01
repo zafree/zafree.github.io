@@ -18,11 +18,12 @@
     "tags": ["CSS"]
   },
   {
-    "id": 6,
-    "slug": "bubt-index",
-    "title": "BUBT Index",
-    "subtitle": "An university homepage proposal",
-    "desc": "An university homepage proposal",
-    "tags": ["Proposal", "Design"]
+    "done": true,
+    "id": 1,
+    "slug": "bpm",
+    "title": "BUBT Professional Meetup",
+    "subtitle": "Want to be a part of something awesome?",
+    "desc": "It’s the “Meetup” we all BUBTians wanted to attend.",
+    "tags": ["Community"]
   }
 ]
