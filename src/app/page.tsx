@@ -2,6 +2,7 @@ import Brace from '@/components/brace/Brace'
 import Hero from '@/components/hero/Hero'
 
 import s from './page.module.sass'
+import PastCollab from '@/components/past-collab/PastCollab'
 function Home() {
   return (
     <>
@@ -11,7 +12,8 @@ function Home() {
       >
         <Brace />
       </Hero>
-      {/* <div className="box"></div> */}
+
+      <PastCollab />
     </>
   )
 }

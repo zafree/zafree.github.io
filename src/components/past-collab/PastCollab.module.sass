@@ -1,0 +1,69 @@
+@import '@/styles/_config.sass'
+
+.PastCollab
+  position: relative
+  +space--base
+  $root: &
+  &__container
+    +container
+
+  &__header
+    display: flex
+    flex-direction: column
+    align-items: center
+    text-align: center
+    +tablet
+      align-items: flex-start
+      text-align: left
+
+  &__title
+    +title
+
+  &__subtitle
+    +subtitle
+    max-width: 20em
+    +tablet
+      max-width: none
+  &__copy
+    +copy
+    +copy--md
+    margin-top: .6em
+    max-width: 20em
+    color: $gray
+    // border: 1px solid red
+    +tablet
+      margin-top: 0.2em
+      max-width: none
+
+  &__list
+    list-style: none
+    padding: 0
+    display: flex
+    flex-direction: row
+    flex-wrap: wrap
+    justify-content: center
+    margin-left: -$gutter
+    margin-right: -$gutter
+    +tablet
+      justify-content: flex-start
+      margin-left: -$gutter * 1.5
+      margin-right: -$gutter * 1.5
+    +laptop
+  &__item
+    position: relative
+    max-width: 50%
+    padding: $gutter
+    +tablet
+      max-width: none
+      padding: $gutter * 1.5
+    +laptop
+  &__wrap
+    position: relative
+    display: flex
+    align-items: center
+    height: 5.6em
+    // background-color: rgba(green, 0.1)
+  &__image
+    max-height: 100%
+    +tablet
+    +laptop
