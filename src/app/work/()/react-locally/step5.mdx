@@ -1,0 +1,77 @@
+import Image from 'next/image'
+
+---
+
+# Step 5
+
+If I have no plans to write any unit tests in my project, I skip this step.
+
+
+Write unit testing for every component is definitely a best practice. So I do my best to write 
+some, even though I’m not good at it. But integrating a testing library is definitely a good 
+add-ons. 
+
+Let’s setup `vitest`:
+
+~~~terminal
+yarn add vitest -D
+~~~
+
+* 🧪 [`vitest`](https://vitest.dev/) super fast testing framework.
+
+There is an [example list](https://github.com/vitest-dev/vitest/tree/main/examples) for different
+setups provided by Vitest. The one I am going to be utilizing here is `react-testing-lib` 
+[this](https://github.com/vitest-dev/vitest/tree/main/examples/react-testing-lib).
+You can also check out [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/).
+
+To get started, I am going to install:
+
+~~~terminal
+yarn add -D jsdom @testing-library/react @testing-library/jest-dom
+~~~ 
+
+* 🍃 [`jsdom`](https://www.npmjs.com/package/jsdom) manipulate the virtual DOM, tests without launching a real browser.
+* 🪶 [`@testing-library/react`](https://testing-library.com/docs/react-testing-library/intro/) light-weight solution for testing React components.
+* 🎭 [`@testing-library/jest-dom`](https://testing-library.com/docs/ecosystem-jest-dom) provides custom DOM element matchers for [Jest](https://jestjs.io/).
+
+Now from the [example](https://github.com/vitest-dev/vitest/tree/main/examples/react-testing-lib),
+open their [config](https://github.com/vitest-dev/vitest/blob/main/examples/react-testing-lib/vite.config.ts) 
+file and update my `vite.config.ts` accordingly:
+
+~~~ts
++ /* eslint-disable import/no-extraneous-dependencies */
++ /// <reference types="vitest" />
++ /// <reference types="vite/client" />
+
+import react from '@vitejs/plugin-react'
+import { defineConfig } from 'vite'
+
+// https://vitejs.dev/config/
+export default defineConfig({
+  plugins: [react()],
++ test: {
++  globals: true,
++  environment: 'jsdom',
++  setupFiles: ['./src/setupTests.ts'],
++  css: true,
++ },
+})
+~~~
+
+At this point, along with setting `globals: true`, they are instructed that we need to go into
+`tsconfig.json` file and update `compilerOptions`:
+
+~~~json
+{
+  "compilerOptions": {
+    ...
+    "jsx": "react-jsx",
+  + "types": ["vitest/globals"],
+    ...
+  },
+  ...
+}
+~~~
+
+
+Now it’s ready to write any unit testing. 

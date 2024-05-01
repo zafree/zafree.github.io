@@ -13,8 +13,16 @@
     "id": 19,
     "slug": "fluid-typography",
     "title": "Fluid typography",
-    "subtitle": "Render font-size: calc(vw + em)",
+    "subtitle": "And, font-size: calc(vw + em)",
     "desc": "Target render font-size: calc(vw + em)",
     "tags": ["CSS"]
+  },
+  {
+    "id": 6,
+    "slug": "bubt-index",
+    "title": "BUBT Index",
+    "subtitle": "An university homepage proposal",
+    "desc": "An university homepage proposal",
+    "tags": ["Proposal", "Design"]
   }
 ]

@@ -1,0 +1,33 @@
+@import "@/styles/_config.sass"
+
+.title
+  +title
+  max-width: 30em
+
+.subtitle
+  +copy
+  +copy--base
+  font-weight: 500
+  margin-bottom: 0
+
+.copy
+  +copy
+  +copy--base
+  .copy
+    font-size: 1em
+    margin-top: 0
+    margin-bottom: 0
+  code
+    font-size: 0.75em
+    background-color: $lighter
+    padding-left: 0.3em
+    padding-right: 0.3em
+    border-radius: 0.3em
+    display: inline-block
+
+.pre
+  +copy
+  font-size: $body-size * 0.583333333333333
+  +ffs(16, 14)
+  +laptop
+    font-size: $body-size * 0.666666666666667

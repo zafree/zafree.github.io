@@ -1,0 +1,46 @@
+@import '@/styles/_config.sass'
+
+.Content
+  position: relative
+  $root: &
+  &__container
+    +container
+    +container--content
+  &__row
+    position: relative
+    margin-top: $gutter
+    margin-bottom: $gutter
+    &.flex
+      +laptop
+        display: flex
+      #{$root}__links
+        +laptop
+          margin-left: 3em
+    &.center
+      +laptop
+        display: flex
+        flex-direction: column
+        align-items: center
+
+  &__copies
+    width: 100%
+    max-width: 64em
+    flex: 1
+    // border: 1px solid red
+    +laptop
+      flex: 2
+    &.center
+      margin-left: auto
+      margin-right: auto
+  &__links
+    width: 100%
+    max-width: 64em
+    // border: 1px solid red
+    +laptop
+      flex: 1
+  &__linksWrap
+    +laptop
+      margin-left: 2em
+    a
+      color: $primary
+      text-decoration: none

@@ -1,0 +1,116 @@
+import Image from 'next/image'
+
+--- 
+
+# Step 2
+
+~~~bash
+yarn add eslint -D
+
+eslint-plugin-react@latest 
+@typescript-eslint/eslint-plugin@latest 
+@typescript-eslint/parser@latest
+~~~
+
+~~~bash
+npx eslint --init
+~~~
+
+I already have `eslint` in my project, so just need to level it up with `eslint-airbnb-config`.
+
+* 🚩 [`eslint`](https://eslint.org/) check syntax and find problems.
+* 📖 [`eslint-airbnb-config`](https://www.npmjs.com/package/eslint-config-airbnb) to follow some [rules](https://airbnb.io/javascript/react/).
+
+Let’s install `eslint-airbnb-config`:
+
+~~~terminal
+npx install-peerdeps --dev eslint-config-airbnb
+
+eslint-config-airbnb@19.0.4 
+eslint@^8.2.0 
+eslint-plugin-import@^2.25.3 
+eslint-plugin-jsx-a11y@^6.5.1 
+eslint-plugin-react@^7.28.0 
+eslint-plugin-react-hooks@^4.3.0 --dev
+~~~
+
+After it installed, it’s time to update [hooks](https://www.npmjs.com/package/eslint-config-airbnb#eslint-config-airbnbhooks) 
+inside `.eslintrc` config file:
+
+~~~cjs
+module.exports = {
+  root: true,
+  env: { browser: true, es2020: true },
+  extends: [
+  - 'eslint:recommended',
+  + 'airbnb',
+  + 'airbnb/hooks',
+    'plugin:@typescript-eslint/recommended',
+    'plugin:react-hooks/recommended',
+  ],
+  ignorePatterns: ['dist', '.eslintrc.cjs'],
+  parser: '@typescript-eslint/parser',
+  plugins: ['react-refresh'],
+  rules: {
+    'react-refresh/only-export-components': [
+      'warn',
+      { allowConstantExport: true },
+    ],
+  },
+}
+~~~
+
+Now I need these rules also support TypeScript. For that I need to install 
+[`eslint-config-airbnb-typescript`](https://www.npmjs.com/package/eslint-config-airbnb-typescript):
+
+~~~js
+yarn add eslint-config-airbnb-typescript -D
+~~~
+
+...and update [hook](https://www.npmjs.com/package/eslint-config-airbnb-typescript#3-configure-eslint):
+
+~~~cjs
+extends: [
+  'airbnb',
++ 'airbnb-typescript',
+  'airbnb/hooks',
+  ...
+]
+~~~
+
+Now I have rules for my `.tsx` files as well.
+Now, I need to tell ESLint where to find my TypeScript config.
+
+[Set](https://www.npmjs.com/package/eslint-config-airbnb-typescript#4-configure-the-eslint-typescript-parser) 
+`parserOptions.project` to the path of `tsconfig.json`.
+
+~~~cjs
++ parserOptions: {
++   project: './tsconfig.json'
++ },
+~~~
+
+Now, I can add my custom rules also, like: 
+
+~~~cjs
+rules: {
+  'react-refresh/only-export-components': [
+    'warn',
+    { allowConstantExport: true },
+  ],
++ 'react/react-in-jsx-scope': 0,
+},
+~~~
+
+Lastly, update `tsconfig.json`:
+
+~~~json
+"include": [
+  "src",
++ "vite.config.ts",
++ ".eslintrc.cjs",
+]
+~~~
+
+the developer window. Done. From now [airbnb’s default rules](https://airbnb.io/javascript/react/) are
+applied all over my code.

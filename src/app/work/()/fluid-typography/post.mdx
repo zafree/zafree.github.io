@@ -1,0 +1,152 @@
+import Content, { Copies, Links } from '@/components/content/Content'
+import Image from 'next/image'
+
+If you are a web developer, you’ve probably seen font-size declarations something like this:
+
+~~~css
+body {
+  font-size: calc(21px + 3 * ((100vw - 375px) / 825));
+}
+~~~
+
+But back in 2017, I saw an unusual font-size declaration for the first time:
+
+~~~css
+body {
+  font-size: calc(1.9393939394vw + 2.8727272727em);
+}
+~~~
+
+The calculation seemed like magic, leaving me scratching my head.
+I had no idea how it worked or how it was calculated. 
+I searched online but couldn’t find any answers.
+Still, I had to figure it out myself. It seemed pretty cool to explore.
+
+In 2024, the frustration grew as I continued to work with fluid font sizes. 
+But I remain hopeful that one day, I’ll unlock its logic, inshallah.
+
+---
+
+# I know the fundamental
+
+Here’s the math, credit [Mike Riethmuller:](https://www.madebymike.com.au/writing/fluid-type-calc-examples/)
+
+~~~css
+body {
+  font-size: calc(min_font + (max_font - min_font) * ((100vw - min_viewport_width) / (max_viewport_width - min_viewport_width)));
+}
+~~~
+
+This is a simplified version of fluid font size with pixels. 
+If I want the font size to range from `21px` on a `375px` screen to `24px` on a `1200px` screen, it would be like this:
+
+~~~css
+body {
+  font-size: 21px;
+  font-size: calc(21px + (24 - 21) * ((100vw - 375px) / (1200 - 375)));
+}
+@media screen and (min-width: 1200px) {
+  body {
+    font-size: 24px;
+  }
+} 
+~~~
+
+Browsers will render the `calc()` function as follows:
+
+~~~
+body {
+  font-size: calc(21px + 3 * (100vw - 375px) / 825);
+}
+~~~
+
+This isn’t what I want. 
+
+I want to render something like this:
+
+~~~
+body {
+  font-size: calc(0.3636363636vw + 19.6363636364px);
+}
+~~~
+
+So, I need to do some basic math. But it took me 7 years to figure it out. 
+Here’s an example:
+
+~~~css
+// math
+1: 21px + (24 - 21) * ((100vw - 375px) / (1200 - 375))
+2: 21px + (24 - 21) * ((100vw / (1200 - 375)) - (375px / (1200 - 375)))
+3: 21px + ((24 - 21) * (100vw / (1200 - 375))) - ((24 - 21) * (375px / (1200 - 375)))
+4: ((24 - 21) * (100vw / (1200 - 375))) + (21px - ((24 - 21) * (375px / (1200 - 375))))  
+
+// browser will render 
+1: 21px + 3 * (100vw - 375px) / 825
+2: 21px + 3 * (0.1212121212vw - 0.4545454545px)
+3: 21px + 0.3636363636vw - 1.3636363636px
+4: 0.3636363636vw + 19.6363636364px
+~~~
+
+Last one is the output I want. So here’s the final math: 
+
+~~~css
+body {
+  font-size: calc(((max_font - min_font) * 100vw / (max_viewport_width - min_viewport_width)) + (min_font  - ((max_font - min_font) * min_viewport_width) / (max_viewport_width - min_viewport_width)));
+}
+~~~
+
+---
+
+# In Sass
+
+I love Sass, and [Dart Sass](https://sass-lang.com/dart-sass/) is my go-to for every project. 
+When it comes to units, I prefer `em`. Remember, `1em = 16px`. To keep things simple, I start by setting the body font-size to `62.5%`, making `1em = 10px`.
+
+~~~sass
+body
+  font-size: 62.5%
+~~~
+
+Finally I’ve crafted a (pretty robust) [@mixin](https://sass-lang.com/documentation/at-rules/mixin/), like this:
+
+~~~sass
+// Fluid Font Size (ffs)
+// target: calc(vw + em)
+
+@use "sass:math"
+
+@function strip-unit($value)
+  @return math.div($value, ($value * 0 + 1))
+
+=ffs($fs-max, $fs-min, $w-max: strip-unit($w-max), $w-min: strip-unit($w-min))
+  font-size: calc(($fs-max - $fs-min) * 100vw / ($w-max - $w-min) + (($fs-min * .1em) - ($fs-max - $fs-min) * ($w-min * .1em) / ($w-max - $w-min)))
+~~~
+
+Here’s how I use it:
+
+~~~sass
+$w-min: 375px
+$w-max: 1200px
+
+p
+  +ffs(24, 21)
+~~~
+
+Now, the browser renders my desired target:
+
+~~~css
+p {
+  font-size: calc(0.3636363636vw + 1.9636363636em);
+}
+~~~
+
+--- 
+
+# Conclusion
+
+Yes, after 7 long years, I’ve finally cracked its logic. Alhamdulillah.
+
+Am I leaving you scratching your head? 
+I understand it’s tough. Fluid font sizes, result like `calc(vw + em)`, 
+might seem tricky initially, but with the right approach, 
+you’ll get there too. Read well, be patient. Best of luck!

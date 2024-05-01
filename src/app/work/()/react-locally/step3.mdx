@@ -1,0 +1,62 @@
+import Image from 'next/image'
+
+--- 
+
+# Step 3
+
+**So at this point,** ESLint is configured, which handles code style and things like missing 
+semicolons or using single quotes vs double quotes.
+
+For handling code formatting, I’m going to install `prettier`:
+
+~~~terminal
+yarn add -D prettier eslint-config-prettier eslint-plugin-prettier
+~~~
+* 💄 [`prettier`](https://prettier.io/) handle code formatting.
+* 🚧 [`eslint-config-prettier`](https://www.npmjs.com/package/eslint-config-prettier) will turns off all rules that might conflict with `prettier`.
+* 🤡 [`eslint-plugin-prettier`](https://www.npmjs.com/package/eslint-plugin-prettier) runs `prettier` as an `eslint` rules.
+
+**Configuration File**
+I’m going to [create](https://prettier.io/docs/en/configuration)
+`.prettierrc.cjs` *(as like `.eslintrc.cjs`)* file that exports an object using `module.exports`.
+
+~~~cjs
+const config = {
+  trailingComma: "es5",
+  tabWidth: 2,
+  semi: false,
+  singleQuote: true,
+};
+
+module.exports = config;
+~~~
+
+**Integrating with Linters**
+After reading the [doc](https://prettier.io/docs/en/integrating-with-linters), 
+I found that `eslint-plugin-prettier` is generally not recommended, 
+but it can be useful in certain circumstances, which aligns with my needs.
+
+Open `.eslintrc` config file and add `prettier` to the plugins section: 
+
+~~~cjs
+plugins: [
+  'react-refresh',
++ 'prettier',
+],
+~~~
+
+
+Also, [add](https://www.npmjs.com/package/eslint-plugin-prettier#configuration-legacy-eslintrc) 
+`plugin:prettier/recommended` as the last item in the extends array in `.eslintrc` 
+config file. This allows `eslint-config-prettier` to override other configs.
+
+~~~cjs
+extends: [
+  'airbnb',
+  'airbnb-typescript',
+  'airbnb/hooks',
+  'plugin:@typescript-eslint/recommended',
+  'plugin:react-hooks/recommended',
++ 'plugin:prettier/recommended',
+]
+~~~

@@ -1,0 +1,70 @@
+import Image from 'next/image'
+
+---
+
+# Step 6
+
+This is the last step. 
+
+I ask myself, does my website or application have multiple pages or routes?
+
+If yes, I use `react-route-dom`. 
+
+Once my website loads, it’s allowing me to navigate between pages without any browser refreshing.
+It's like magic, delivering a smooth user experience while navigation. 
+
+Install it as a dependency:
+
+~~~terminal
+yarn add react-router-dom
+~~~
+
+* 🔀 [`react-router-dom`](https://github.com/remix-run/react-router/tree/main/packages/react-router-dom) navigate between pages without any browser refreshing.
+
+After that, I followed [the tutorial](https://reactrouter.com/en/main/start/tutorial), 
+spending an hour to set up everything I needed. I have to do just two things.
+
+
+
+1st, wrap `AppLayout` component with `BrowserRouter` in my `App.tsx` file:
+~~~tsx
+import { BrowserRouter } from 'react-router-dom'
+import AppLayout from './components/app-layout/AppLayout'
+
+function App() {
+  return (
+    <BrowserRouter>
+      <AppLayout />
+    </BrowserRouter>
+  )
+}
+
+export default App
+~~~
+
+2nd, set up `NavLink` and `Routes` in `AppLayout` component:
+
+~~~tsx
+import { NavLink, Route, Routes } from 'react-router-dom'
+import Home from '../../pages/home/Home'
+import Contact from '../../pages/contact/Contact'
+
+function AppLayout() {
+  return (
+    <>
+      <nav>
+        <NavLink to="/">Home</NavLink>
+        <NavLink to="/contact">Contact</NavLink>
+      </nav>
+      <Routes>
+        <Route index element={<Home />} />
+        <Route path="contact" element={<Contact />} />
+      </Routes>
+    </>
+  )
+}
+
+export default AppLayout
+~~~
+
+All done! This setup will enable navigation between my pages without browser refreshing.

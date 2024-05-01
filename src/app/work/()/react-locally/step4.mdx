@@ -1,0 +1,46 @@
+import Image from 'next/image'
+
+---
+
+# Step 4
+
+I love CSS, and [Dart Sass](https://sass-lang.com/dart-sass/) is my go-to for every project.
+Vite or React does not provide built-in support for `.scss`, `.sass`, `.less`, `.styl` or `stylus` files. 
+
+To use `sass`, first I have to install it:
+
+~~~terminal
+yarn add sass -D
+~~~
+
+* 🖌️ [`dart-sass`](https://sass-lang.com/dart-sass/) CSS with superpowers.
+
+Now I just need to use CSS modules combined with `sass` by prepending `.module` to 
+the file extension, for example `Header.module.sass`. 
+
+Just need a [few adjustments](https://vitejs.dev/config/shared-options.html#css-modules) 
+on render classNames. I prefer `localsConvention: 'camelCase'` and shorter `generateScopedName`. 
+
+To do that, open `vite.config.ts` file and add a `css` section as follows:
+
+~~~ts
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
+
+// https://vitejs.dev/config/
+export default defineConfig({
+  plugins: [react()],
++ css: {
++   modules: {
++     localsConvention: 'camelCase',
++     generateScopedName: '[local]__[hash:base64:4]',
++   },
++ },
+})
+
+~~~
+
+Now there’s no need to worry about class names mismatching. 
+
+If you're curious why I use CSS Modules, check out this [article by Glen Madden](https://glenmaddern.com/articles/css-modules). 
+It has the answer you need.
