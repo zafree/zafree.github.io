@@ -9,6 +9,7 @@ import './layout.sass'
 
 import { sans, serif } from '@/fonts/fonts'
 import c from 'classnames'
+import Footer from '@/components/footer/Footer'
 
 export const metadata: Metadata = {
   title: 'Zafree',
@@ -33,6 +34,7 @@ export default function RootLayout({
             </Navigation>
           </Header>
           <Content>{children}</Content>
+          <Footer />
         </AppLayout>
       </body>
     </html>
