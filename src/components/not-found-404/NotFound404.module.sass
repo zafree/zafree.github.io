@@ -1,0 +1,22 @@
+@import '@/styles/_config.sass'
+
+.NotFound
+  position: relative
+  $root: &
+  &__container
+    +container
+  &__row
+    position: relative
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    height: 80vh
+
+  &__heading
+    +heading
+    +heading--hero
+    padding-right: 0
+  &__subheading
+    +copy
+    +copy--hero
