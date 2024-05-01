@@ -16,6 +16,7 @@ import Links1 from './links1.mdx'
 import Links2 from './links2.mdx'
 import Links3 from './links3.mdx'
 import Separator from '@/components/separator/Separator'
+import Button from '@/components/button/Button'
 
 export const metadata: Metadata = {
   title: 'About. Zafree.',
@@ -28,29 +29,20 @@ function Hire() {
       <Hero kicker="Hire me" title="I’m a design-minded front-end developer.">
         <h2 className={s.Hire__subheading}>
           Also called{' '}
-          <Link
-            href="https://bradfrost.com/blog/post/frontend-design/"
-            target="_blank"
-          >
+          <Button to="https://bradfrost.com/blog/post/frontend-design/">
             front-end designer
-          </Link>
+          </Button>
           , UI developers, UI engineer, or{' '}
-          <Link
-            href="https://snook.ca/archives/opinion/design-engineering"
-            target="_blank"
-          >
+          <Button to="https://snook.ca/archives/opinion/design-engineering">
             design engineer
-          </Link>
+          </Button>
           .
         </h2>
         <p className={s.Hire__copy}>
           As a <em>[choose one of the above titles]</em>, I work on the{' '}
-          <Link
-            href="https://bradfrost.com/blog/post/frontend-design/"
-            target="_blank"
-          >
+          <Button to="https://bradfrost.com/blog/post/frontend-design/">
             front-end of the front-end
-          </Link>
+          </Button>
           . That is, my work lies at the intersection of design and back-end.
         </p>
       </Hero>
