@@ -22,7 +22,7 @@ function Deligram() {
       <HeroImage>
         <Image
           width={1920}
-          height={840}
+          height={960}
           src={`/work/${work?.slug}/cover.jpg`}
           alt={`${work?.title} cover image`}
         />

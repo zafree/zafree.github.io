@@ -22,10 +22,10 @@ function BPM() {
       <Hero title={work?.title as string} subtitle={work?.subtitle} />
       <HeroImage>
         <Image
-          width={1280}
-          height={640}
+          width={1920}
+          height={960}
           src={`/work/${work?.slug}/cover.jpg`}
-          alt="BUBT Profession Meetup 2016 Cover"
+          alt={`${work?.title} cover image`}
         />
       </HeroImage>
       <Intro />
