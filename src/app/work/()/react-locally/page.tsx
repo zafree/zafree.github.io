@@ -4,7 +4,8 @@ import React from 'react'
 import Hero from '@/components/hero/Hero'
 import { getWorksSlug } from '@/api/works/getWorks'
 import { usePathname } from 'next/navigation'
-import Content, { Copies, Links, Row } from '@/components/content/Content'
+
+import Content, { Row, Main, Left, Right } from '@/components/content/Content'
 import Intro from './intro.mdx'
 import Features from './features.mdx'
 import Start from './start.mdx'
@@ -25,7 +26,7 @@ function ReactLocally() {
       <Hero title={work?.title as string} subtitle={work?.subtitle} />
       <Content>
         <Row center>
-          <Copies>
+          <Main>
             <Intro />
             <Features />
             <Start />
@@ -36,7 +37,7 @@ function ReactLocally() {
             <Step4 />
             <Step5 />
             <Step6 />
-          </Copies>
+          </Main>
         </Row>
       </Content>
     </>
