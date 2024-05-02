@@ -28,11 +28,9 @@ function BPM() {
           alt="BUBT Profession Meetup 2016 Cover"
         />
       </HeroImage>
-      <Content>
-        <Intro />
-        <WebDesign />
-        <BUBTAwesome />
-      </Content>
+      <Intro />
+      <WebDesign />
+      <BUBTAwesome />
     </>
   )
 }
