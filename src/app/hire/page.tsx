@@ -1,25 +1,13 @@
 import { Metadata } from 'next'
 import Hero from '@/components/hero/Hero'
-import Link from 'next/link'
-
-import s from './Hire.module.sass'
-import Content, { Copies, Links, Row } from '@/components/content/Content'
-
-import Title from './title.mdx'
-
-import Copies1 from './copies1.mdx'
-import Copies2 from './copies2.mdx'
-import Copies3 from './copies3.mdx'
-import Copies4 from './copies4.mdx'
-
-import Links1 from './links1.mdx'
-import Links2 from './links2.mdx'
-import Links3 from './links3.mdx'
-import Separator from '@/components/separator/Separator'
 import Button from '@/components/button/Button'
 
+import s from './Hire.module.sass'
+
+import Tldr from './tldr.mdx'
+
 export const metadata: Metadata = {
-  title: 'About. Zafree.',
+  title: 'Hire. Zafree.',
   description: '',
 }
 
@@ -46,40 +34,7 @@ function Hire() {
           . That is, my work lies at the intersection of design and back-end.
         </p>
       </Hero>
-      <Content>
-        <Row>
-          <Title />
-        </Row>
-        <Row flex>
-          <Copies>
-            <Copies1 />
-          </Copies>
-          <Links>
-            <Links1 />
-          </Links>
-        </Row>
-        <Row flex>
-          <Copies>
-            <Copies2 />
-          </Copies>
-          <Links>
-            <Links2 />
-          </Links>
-        </Row>
-        <Separator />
-        <Row flex>
-          <Copies>
-            <Copies3 />
-          </Copies>
-          <Links>
-            <Links3 />
-          </Links>
-        </Row>
-        <Separator />
-        <Row>
-          <Copies4 />
-        </Row>
-      </Content>
+      <Tldr />
     </>
   )
 }

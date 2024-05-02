@@ -15,34 +15,36 @@ export default function Content(props: IContent) {
 export function Row(props: IContent) {
   return (
     <>
-      <div
-        className={c(
-          s.Content__row,
-          props.flex && s.flex,
-          props.center && s.center
-        )}
-      >
+      <div className={c(s.Content__row, props.center && s.center)}>
         {props.children}
       </div>
     </>
   )
 }
 
-export function Copies(props: IContent) {
+export function Main(props: IContent) {
   return (
     <>
-      <div className={c(s.Content__copies, props.center && s.center)}>
+      <div className={c(s.Content__colMain, props.full && s.full)}>
         {props.children}
       </div>
     </>
   )
 }
-
-export function Links(props: IContent) {
+export function Left(props: IContent) {
   return (
     <>
-      <div className={c(s.Content__links, props.center && s.center)}>
-        <div className={s.Content__linksWrap}>{props.children}</div>
+      <div className={s.Content__colLeft}>
+        <div className={s.Content__colLeft__wrap}>{props.children}</div>
+      </div>
+    </>
+  )
+}
+export function Right(props: IContent) {
+  return (
+    <>
+      <div className={s.Content__colRight}>
+        <div className={s.Content__colRight__wrap}>{props.children}</div>
       </div>
     </>
   )

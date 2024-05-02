@@ -2,9 +2,9 @@ import s from './Separator.module.sass'
 
 function Separator() {
   return (
-    <div className={s.separator}>
+    <div className={s.Separator}>
       <svg
-        className={s.separator__svg}
+        className={s.Separator__svg}
         viewBox="0 0 539 33"
         xmlns="http://www.w3.org/2000/svg"
       >

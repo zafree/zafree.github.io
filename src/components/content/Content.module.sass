@@ -5,42 +5,63 @@
   $root: &
   &__container
     +container
-    +container--content
   &__row
+    // background-color: rgba(green, 0.1)
     position: relative
     margin-top: $gutter
     margin-bottom: $gutter
-    &.flex
-      +laptop
-        display: flex
-      #{$root}__links
-        +laptop
-          margin-left: 3em
-    &.center
-      +laptop
-        display: flex
-        flex-direction: column
-        align-items: center
-
-  &__copies
-    width: 100%
+    display: flex
+    flex-direction: column
     max-width: 64em
-    flex: 1
-    // border: 1px solid red
+    margin-left: auto
+    margin-right: auto
     +laptop
-      flex: 2
+      max-width: none
+      display: flex
+      flex-direction: row
     &.center
-      margin-left: auto
-      margin-right: auto
-  &__links
-    width: 100%
-    max-width: 64em
-    // border: 1px solid red
+      +laptop
+        justify-content: center
+
+  &__colHeading
+    display: flex
+    flex-direction: column
+    width: 64em + 32.5
+
+  &__colMain
+    // background-color: rgba($primary, 0.3)
+    +laptop
+      width: 100%
+      max-width: 64em
+      order: 2
+    &.full
+      +laptop
+        max-width: 96.5em
+
+  &__colLeft,
+  &__colRight
     +laptop
       flex: 1
-  &__linksWrap
-    +laptop
-      margin-left: 2em
+
+  &__colLeft
+    // background-color: rgba($primary, 0.1)
+    p
+      +copy--md
     a
+      font-size: 0.875em
       color: $primary
       text-decoration: none
+    +laptop
+      max-width: 26.5em
+      margin-right: 6em
+      order: 1
+  &__colRight
+    // background-color: rgba($primary, 0.2)
+    a
+      font-size: 0.875em
+      color: $primary
+      text-decoration: none
+    +laptop
+      max-width: 28.5em
+      margin-left: 4em
+      order: 3

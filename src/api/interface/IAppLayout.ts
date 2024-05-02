@@ -3,7 +3,7 @@ export interface IAppLayout {
 }
 
 export interface IContent {
-  flex?: boolean
+  full?: boolean
   center?: boolean
   children: React.ReactNode
 }
