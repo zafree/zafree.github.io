@@ -10,28 +10,20 @@
   width: 100%
   &:hover
     text-decoration: none
-  // &.done
-  //   &::before
-  //     content: ""
-  //     position: absolute
-  //     top: 0
-  //     left: 0
-  //     right: 0
-  //     bottom: 0
-  //     background-color: rgba($green, 0.3)
-  //     z-index: 1
+  &.done
+    &::before
+      content: ""
+      position: absolute
+      top: 0
+      left: 0
+      right: 0
+      bottom: 0
+      background-color: rgba($green, 0.3)
+      z-index: 1
   &__imageWrap
-    background-color: rgba($primary, 0.1)
-    aspect-ratio: 2 / 1
     position: relative
-    display: inline-flex
     border-radius: .4em
     overflow: hidden
-  &__image
-    aspect-ratio: 2 / 1
-    object-position: 50% 50%
-    object-fit: cover
-    vertical-align: middle
 
   &__content
     position: relative

@@ -3,7 +3,7 @@ import { IWork } from '@/api/works/IWork'
 import c from 'classnames'
 import s from './WorkItem.module.sass'
 import Button from '../button/Button'
-import Image from 'next/image'
+import Pilpil from '@/components/pilpil/Pilpil'
 
 function WorkItem(props: IWork) {
   return (
@@ -13,11 +13,11 @@ function WorkItem(props: IWork) {
         to={`/work/${props.slug}`}
       >
         <div className={s.Work__imageWrap}>
-          <Image
-            className={s.Work__image}
-            width={1280}
-            height={640}
-            src={`/work/${props.slug}/cover.jpg`}
+          <Pilpil
+            width={640}
+            height={320}
+            small={`/work/${props.slug}/thumb-small.jpg`}
+            large={`/work/${props.slug}/thumb.jpg`}
             alt={`${props.title} cover image`}
           />
         </div>

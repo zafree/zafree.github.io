@@ -96,7 +96,10 @@ function Pilpil(props: IPilpil) {
 
   return (
     <>
-      <div ref={imageRef} className={s.Image}>
+      <div
+        ref={imageRef}
+        className={c(s.Image, props.className && props.className)}
+      >
         <div
           className={s.Image__aspectRatio}
           style={{ paddingBottom: aspectRatio + '%' }}
