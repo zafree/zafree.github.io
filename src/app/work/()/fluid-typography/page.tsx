@@ -5,7 +5,8 @@ import Hero from '@/components/hero/Hero'
 import { getWorksSlug } from '@/api/works/getWorks'
 import { usePathname } from 'next/navigation'
 import Post from './post.mdx'
-import Image from 'next/image'
+import Pilpil from '@/components/pilpil/Pilpil'
+import Content, { Main, Row } from '@/components/content/Content'
 
 function FluidTypography() {
   const url = usePathname()
@@ -15,12 +16,19 @@ function FluidTypography() {
     <>
       <Hero title={work?.title as string} subtitle={work?.subtitle} />
       <Post />
-      <Image
-        width={640}
-        height={320}
-        src={`/work/${work?.slug}/cover.jpg`}
-        alt={`${work?.title} cover image`}
-      />
+      <Content>
+        <Row center>
+          <Main>
+            <Pilpil
+              width={640}
+              height={320}
+              small={`/work/${work?.slug}/thumb-small.jpg`}
+              large={`/work/${work?.slug}/cover.jpg`}
+              alt={`${work?.title} cover image`}
+            />
+          </Main>
+        </Row>
+      </Content>
     </>
   )
 }
