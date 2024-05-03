@@ -22,7 +22,7 @@ function Deligram() {
       <HeroImage>
         <Pilpil
           width={1920}
-          height={960}
+          height={840}
           small={`/work/${work?.slug}/cover-small.jpg`}
           large={`/work/${work?.slug}/cover.jpg`}
           alt={`${work?.title} cover image`}
