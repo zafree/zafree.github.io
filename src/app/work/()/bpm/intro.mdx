@@ -1,4 +1,5 @@
 import Content, { Row, Main } from '@/components/content/Content'
+import Image from '@/components/pilpil/Pilpil'
 
 <Content>
   <Row center>
@@ -23,10 +24,16 @@ import Content, { Row, Main } from '@/components/content/Content'
 
       ## Year 2016
 
-      It rained. Sitting at my workstation, thinking about my university days. It's been almost 
+      It rained. Sitting at my workstation, thinking about my university days. It’s been almost 
       3 years since I graduated. Miss my university days and everyone around me.
 
-      ![](/work/bpm/image0.jpg)
+      <Image
+        width={640}
+        height={475}
+        small="/work/bpm/image0-small.jpg"
+        large="/work/bpm/image0.jpg"
+        alt="image0"
+      />
 
       Later, I made some calls, trying to connect with some of my classmates over the phone. 
       After talking for a few minutes, I decided to organize a meetup.
@@ -36,7 +43,7 @@ import Content, { Row, Main } from '@/components/content/Content'
       ## Why professionals meetup?
 
       Like me, many students have graduated and stepped into professional life, each facing 
-      their own struggles or finding their place. But now, we've lost touch with each other.
+      their own struggles or finding their place. But now, we’ve lost touch with each other.
 
 
       Here, I’ll try to reconnect with each other, providing an opportunity for current students

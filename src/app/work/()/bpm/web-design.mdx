@@ -1,18 +1,15 @@
-import Content, { Row, Main, Left, Right } from '@/components/content/Content'
 import c from 'classnames'
 import s from './Bpm.module.sass'
+import Content, { Row, Main, Left, Right } from '@/components/content/Content'
+import Image from '@/components/pilpil/Pilpil'
 
-
-{/* <Content>
+<Content>
   <Row center>
     <Main>
       ---
     </Main>
   </Row>
-</Content> */}
-
-<Content>
-  {/* <Row center>
+  <Row center>
     <Main>
       # Web design
 
@@ -27,9 +24,15 @@ import s from './Bpm.module.sass'
   </Row>
   <Row center>
     <Main full>
-      ![](/work/bpm/image1.jpg)
+      <Image
+        width={960}
+        height={629}
+        small="/work/bpm/image1-small.jpg"
+        large="/work/bpm/image1.jpg"
+        alt="Web design"
+      />
     </Main>
-  </Row> */}
+  </Row>
   <Row center>
     <Main>
       <div className={s.animationGrid}>
