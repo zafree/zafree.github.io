@@ -11,7 +11,7 @@ import Intro from './intro.mdx'
 import WebDesign from './web-design.mdx'
 import BUBTAwesome from './bubt-awesome.mdx'
 import HeroImage from '@/components/hero-image/HeroImage'
-import Image from 'next/image'
+import Pilpil from '@/components/pilpil/Pilpil'
 
 function BPM() {
   const url = usePathname()
@@ -21,10 +21,11 @@ function BPM() {
     <>
       <Hero title={work?.title as string} subtitle={work?.subtitle} />
       <HeroImage>
-        <Image
+        <Pilpil
           width={1920}
           height={960}
-          src={`/work/${work?.slug}/cover.jpg`}
+          small={`/work/${work?.slug}/cover-small.jpg`}
+          large={`/work/${work?.slug}/cover.jpg`}
           alt={`${work?.title} cover image`}
         />
       </HeroImage>

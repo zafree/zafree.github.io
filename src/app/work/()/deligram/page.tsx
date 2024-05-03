@@ -5,8 +5,8 @@ import Hero from '@/components/hero/Hero'
 import { getWorksSlug } from '@/api/works/getWorks'
 import { usePathname } from 'next/navigation'
 
-import Image from 'next/image'
 import HeroImage from '@/components/hero-image/HeroImage'
+import Pilpil from '@/components/pilpil/Pilpil'
 
 import s from './Deligram.module.sass'
 
@@ -20,10 +20,11 @@ function Deligram() {
     <>
       <Hero title={work?.title as string} subtitle={work?.subtitle} />
       <HeroImage>
-        <Image
+        <Pilpil
           width={1920}
           height={960}
-          src={`/work/${work?.slug}/cover.jpg`}
+          small={`/work/${work?.slug}/cover-small.jpg`}
+          large={`/work/${work?.slug}/cover.jpg`}
           alt={`${work?.title} cover image`}
         />
       </HeroImage>
