@@ -26,6 +26,14 @@
     "tags": ["Product", "Design", "Development"]
   },
   {
+    "id": 12,
+    "slug": "pilpil",
+    "title": "Pilpil.js",
+    "subtitle": "Progressive Image Loading",
+    "desc": "A tiny JavaScript library for Progressive Image Loading.",
+    "tags": ["JavaScript"]
+  },
+  {
     "done": true,
     "id": 1,
     "slug": "bpm",
