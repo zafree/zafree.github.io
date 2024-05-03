@@ -7,6 +7,7 @@ import { usePathname } from 'next/navigation'
 import Post from './post.mdx'
 import HeroImage from '@/components/hero-image/HeroImage'
 import Pilpil from '@/components/pilpil/Pilpil'
+import Content, { Main, Row } from '@/components/content/Content'
 
 function PagePilpil() {
   const url = usePathname()
@@ -24,7 +25,19 @@ function PagePilpil() {
           alt={`${work?.title} cover image`}
         />
       </HeroImage>
-      {/* <Post /> */}
+      <Content>
+        <Row center>
+          <Main>
+            <Pilpil
+              width={2000}
+              height={1446}
+              small={`/work/${work?.slug}/small-cover.jpg`}
+              large={`/work/${work?.slug}/image1.jpeg`}
+              alt={`${work?.title} cover image`}
+            />
+          </Main>
+        </Row>
+      </Content>
     </>
   )
 }

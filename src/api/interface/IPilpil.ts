@@ -4,5 +4,6 @@ export interface IPilpil {
   small: string
   large: string
   alt?: string
+  caption?: string
   className?: string
 }

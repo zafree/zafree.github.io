@@ -96,21 +96,26 @@ function Pilpil(props: IPilpil) {
 
   return (
     <>
-      <div
-        ref={imageRef}
-        className={c(s.Image, props.className && props.className)}
-      >
+      <figure className={s.figure}>
         <div
-          className={s.Image__aspectRatio}
-          style={{ paddingBottom: aspectRatio + '%' }}
-        ></div>
-        <canvas
-          ref={canvasRef}
-          className={c(s.Image__canvas, canvas)}
-          width={canvasWidth}
-          height={canvasHeight}
-        ></canvas>
-      </div>
+          ref={imageRef}
+          className={c(s.Image, props.className && props.className)}
+        >
+          <div
+            className={s.Image__aspectRatio}
+            style={{ paddingBottom: aspectRatio + '%' }}
+          ></div>
+          <canvas
+            ref={canvasRef}
+            className={c(s.Image__canvas, canvas)}
+            width={canvasWidth}
+            height={canvasHeight}
+          ></canvas>
+        </div>
+        {props.caption && (
+          <figcaption className={s.figure__caption}>{props.caption}</figcaption>
+        )}
+      </figure>
     </>
   )
 }

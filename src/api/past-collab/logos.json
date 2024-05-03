@@ -1,0 +1,58 @@
+[
+  {
+    "status": true,
+    "id": 8,
+    "company": "Vision Sports Ventures, Inc.",
+    "image": "upside",
+    "width": 130
+  },
+  {
+    "status": true,
+    "id": 7,
+    "company": "Daily Number, Inc.",
+    "image": "real-time-rackets",
+    "width": 102
+  },
+  {
+    "status": true,
+    "id": 6,
+    "company": "Daily Number, Inc.",
+    "image": "dailynumber",
+    "width": 139
+  },
+  {
+    "status": true,
+    "id": 5,
+    "company": "Deligram Technologies Limited",
+    "image": "deligram",
+    "width": 123
+  },
+  {
+    "status": true,
+    "id": 4,
+    "company": "ThemeBucket",
+    "image": "themebucket",
+    "width": 161
+  },
+  {
+    "status": true,
+    "id": 3,
+    "company": "Saifurs",
+    "image": "saifurs",
+    "width": 56
+  },
+  {
+    "status": true,
+    "id": 2,
+    "company": "Design and Development Consultancy Limited",
+    "image": "ddc",
+    "width": 150
+  },
+  {
+    "status": true,
+    "id": 1,
+    "company": "Incepsys Limited",
+    "image": "incepsys",
+    "width": 131
+  }
+]

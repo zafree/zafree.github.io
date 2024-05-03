@@ -1,12 +1,9 @@
-import Image from 'next/image'
 import s from './PastCollab.module.sass'
+import { getLogos } from '@/api/past-collab/getLogos'
+import Image from '@/components/pilpil/Pilpil'
 
 function PastCollab() {
-  const n = 8
-  let stars = []
-  for (let i = 0; i < n; ++i) {
-    stars.push(<i className="fa fa-star" key={i}></i>)
-  }
+  const allLogos = getLogos()
   return (
     <div className={s.PastCollab}>
       <div className={s.PastCollab__container}>
@@ -17,17 +14,26 @@ function PastCollab() {
           </p>
         </div>
         <ul className={s.PastCollab__list} role="list">
-          {Array.from({ length: 7 }, (_, i) => (
-            <li className={s.PastCollab__item} key={i}>
-              <div className={s.PastCollab__wrap}>
-                <img
-                  className={s.PastCollab__image}
-                  src={'/past-collab/image' + i + '.png'}
-                  loading="lazy"
-                />
-              </div>
-            </li>
-          )).reverse()}
+          {allLogos.map(
+            (logo) =>
+              logo.status && (
+                <li className={s.PastCollab__item} key={logo.id}>
+                  <div
+                    className={s.PastCollab__wrap}
+                    style={{ width: logo.width + 'px' }}
+                  >
+                    <Image
+                      className={s.PastCollab__image}
+                      width={logo.width}
+                      height={56}
+                      small={`/past-collab/${logo.image}-small.jpg`}
+                      large={`/past-collab/${logo.image}.jpg`}
+                      alt={logo.company}
+                    />
+                  </div>
+                </li>
+              )
+          )}
         </ul>
         {/* <p className={s.PastCollab__footnote}><strong>Many of the projects</strong> I’ve worked on have been under NDA. That’s why I can’t share specific details about them.</p> */}
       </div>
