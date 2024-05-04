@@ -3,6 +3,9 @@ import Hero from '@/components/hero/Hero'
 
 import s from './page.module.sass'
 import PastCollab from '@/components/past-collab/PastCollab'
+import Endorsement, {
+  MoreEndorsement,
+} from '@/components/endorsements/Endorsement'
 function Home() {
   return (
     <>
@@ -12,8 +15,9 @@ function Home() {
       >
         <Brace />
       </Hero>
-
       <PastCollab />
+      <Endorsement />
+      <MoreEndorsement />
     </>
   )
 }

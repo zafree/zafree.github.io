@@ -1,0 +1,103 @@
+@import "@/styles/_config"
+
+.Endorsement
+  // background-color: #f7f9fb
+  background-image: linear-gradient(#f7f9fb 0%, #f7f9fb 100px, $white 100%)
+  color: $niro
+  +space--lg
+  $root: &
+  &__container
+    +container
+  &__inner
+    display: flex
+    flex-direction: column-reverse
+    width: 100%
+    max-width: 620px
+    margin-left: auto
+    margin-right: auto
+
+  &__copy
+    +copy
+    +copy--lg
+    margin-top: 1em
+    margin-bottom: 0
+    color: inherit
+    p
+      &:first-child
+        &::before
+          content: "\201C"
+          margin-left: -.35em
+          margin-right: .1em
+      &:last-child
+        &::after
+          content: "\201D"
+      &:not(:first-child)
+        margin-top: 1em
+
+    mark
+      // background-color: $mark
+      background-color: $mark
+      color: inherit
+
+  &__footer
+    display: flex
+    // align-items: center
+
+  &__image
+    width: 56px
+    height: 56px
+    background-color: $primary
+    border-radius: 50%
+    margin-right: 16px
+    overflow: hidden
+    flex-grow: 0
+    flex-shrink: 0
+    flex-basis: auto
+  &__cite
+    flex-grow: 0
+    flex-shrink: 1
+    flex-basis: auto
+    letter-spacing: .025em
+    margin-top: .75em
+  &__name,
+  &__role
+    +copy
+    +copy--xs
+    margin: 0
+    display: block
+    font-style: normal
+  &__name
+    font-size: 1.5em
+    font-weight: 500
+    text-decoration: none
+    padding-top: 0.25em
+    color: inherit
+  &__role
+    color: $gray
+
+// .MoreQuote
+//   padding-top: $gutter
+//   padding-bottom: $gutter
+//   background-color: darken(#f7f9fb, 3%)
+//   +laptop
+//     padding-top: $gutter*1.5
+//     padding-bottom: $gutter*1.5
+//   $root: &
+//   &__container
+//     +container
+
+//   &__inner
+//     width: 100%
+//     +laptop
+//       width: 66.66667%
+//       max-width: 630px
+//       margin-left: auto
+//       margin-right: auto
+//   &__link
+//     +copy
+//     +copy--md
+//     font-weight: 500
+//   &__copy
+//     +copy
+//     +copy--md
+//     margin-bottom: 0
