@@ -1,0 +1,59 @@
+@import "@/styles/_config"
+
+.Collage
+  position: relative
+  overflow: hidden
+  margin-bottom: $gutter
+  +tablet
+    margin-bottom: $tablet-gutter
+  +laptop
+    margin-bottom: $laptop-gutter
+  &__scrollable
+    margin-bottom: -30px
+    padding-bottom: 30px
+    overflow-x: scroll
+    &::-webkit-scrollbar
+      -webkit-appearance: none
+      display: none
+  &__container
+    +container
+  &__row
+    position: relative
+  &__wrapper
+    display: inline-flex
+    flex-wrap: nowrap
+    align-items: center
+    box-sizing: content-box
+    padding-right: $gutter
+    +tablet
+      padding-right: $tablet-gutter
+    +laptop
+      padding-right: $laptop-gutter
+    +widescreen
+      padding-right: calc(((100vw - $max-width) / 2) + $max-gutter)
+  &__item
+    position: relative
+    display: inline-flex
+    margin-right: 16px
+    &:last-child
+      margin-right: 0
+    &.image1
+      min-width: 280px
+      +laptop
+        min-width: 410px
+    &.image2
+      min-width: 220px
+      +laptop
+        min-width: 300px
+    &.image3
+      min-width: 220px
+      +laptop
+        min-width: 300px
+    &.image4
+      min-width: 120px
+      +laptop
+        min-width: 190px
+    &.image5
+      min-width: 240px
+      +laptop
+        min-width: 370px
