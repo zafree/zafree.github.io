@@ -29,6 +29,7 @@ export default function RootLayout({
             <Navigation>
               <Link href="/">Home</Link>
               <Link href="/work">Work</Link>
+              {/* <Link href="/loremipsum">Lorem Ipsum</Link> */}
               <Link href="/about">About</Link>
               <Link href="/hire">Hire me</Link>
             </Navigation>
