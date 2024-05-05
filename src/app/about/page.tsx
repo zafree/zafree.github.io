@@ -5,6 +5,7 @@ import Pilpil from '@/components/pilpil/Pilpil'
 import Collage from '@/components/collage/Collage'
 
 import Intro from './intro.mdx'
+import Inprogress from '@/components/inprogress/Inprogress'
 
 export const metadata: Metadata = {
   title: 'About. Zafree.',
@@ -21,6 +22,7 @@ function About() {
       />
       <Collage />
       <Intro />
+      <Inprogress />
     </>
   )
 }
