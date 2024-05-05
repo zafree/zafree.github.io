@@ -11,6 +11,8 @@ import Pilpil from '@/components/pilpil/Pilpil'
 import s from './Deligram.module.sass'
 
 import Intro from './intro.mdx'
+import Inprogress from '@/components/inprogress/Inprogress'
+import Endorsement from '@/components/endorsements/Endorsement'
 
 function Deligram() {
   const url = usePathname()
@@ -29,6 +31,8 @@ function Deligram() {
         />
       </HeroImage>
       <Intro />
+      <Endorsement load="jituboss" />
+      <Inprogress />
     </>
   )
 }

@@ -10,14 +10,15 @@
   // background-color: #f7f9fb
   // background-image: linear-gradient(#f7f9fb 0%, $white 100%)
   // border-top: 1px solid darken(#f7f9fb, 2%)
-  padding-bottom: $gutter
-  margin-top: -$gutter
-  +tablet
-    padding-bottom: $tablet-gutter
-    margin-top: -$tablet-gutter
-  +laptop
-    padding-bottom: $laptop-gutter
-    margin-top: -$laptop-gutter
+  +space--sm
+  // padding-bottom: $gutter
+  // margin-top: -$gutter
+  // +tablet
+  //   padding-bottom: $tablet-gutter
+  //   margin-top: -$tablet-gutter
+  // +laptop
+  //   padding-bottom: $laptop-gutter
+  //   margin-top: -$laptop-gutter
   $root: &
   &__container
     +container
@@ -30,7 +31,8 @@
   &__link
     +copy
     +copy--sm
+    font-weight: 500
   &__copy
     +copy
-    +copy--xs
+    +copy--sm
     margin: 0
