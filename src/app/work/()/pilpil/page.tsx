@@ -8,6 +8,7 @@ import Post from './post.mdx'
 import HeroImage from '@/components/hero-image/HeroImage'
 import Pilpil from '@/components/pilpil/Pilpil'
 import Content, { Main, Row } from '@/components/content/Content'
+import ReadMe from './readme.mdx'
 
 function PagePilpil() {
   const url = usePathname()
@@ -16,7 +17,8 @@ function PagePilpil() {
   return (
     <>
       <Hero title={work?.title as string} subtitle={work?.subtitle} />
-      <HeroImage>
+      <ReadMe />
+      {/* <HeroImage>
         <Pilpil
           width={1920}
           height={960}
@@ -37,7 +39,7 @@ function PagePilpil() {
             />
           </Main>
         </Row>
-      </Content>
+      </Content> */}
     </>
   )
 }

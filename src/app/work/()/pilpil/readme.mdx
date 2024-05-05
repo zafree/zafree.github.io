@@ -1,0 +1,82 @@
+import Content, { Row, Main, Left, Right } from '@/components/content/Content'
+import Pilpil from '@/components/pilpil/Pilpil'
+
+<Content>
+  <Row center>
+    <Main>
+
+      # Pilpil - Progressive Image Loading
+
+      Pilpil is a tiny, pure JavaScript library for Progressive Image Loading with a blur effect to reduce the page load time; as seen on [Medium](https://medium.com/designing-medium/image-zoom-on-medium-24d146fc0c20).
+
+      Check out [Demo](https://zafree.github.io/pilpil) or [Github](https://github.com/zafree/pilpil) 
+
+      <Pilpil
+        width={2000}
+        height={1446}
+        small="https://cdn-images-1.medium.com/freeze/max/30/1*_ASVxMQ2WFospoTZ22MDnw.jpeg?q=20"
+        large="https://cdn-images-1.medium.com/max/2000/1*_ASVxMQ2WFospoTZ22MDnw.jpeg"
+        alt="Workstation"
+        caption="Workstation"
+      />
+
+      # How
+
+      **Step 1:** Link files to your site or application (add `<script>` to bottom of page)
+
+      ```html
+      <link rel="stylesheet" href="pilpil.css" />
+      <script src="pilpil.js"></script>
+      ```
+
+      **Step 2:** Set markup
+
+      ```html
+      <div
+        class="image"
+        data-width="original_width"
+        data-height="original_height"
+        data-small="small_image_path"
+        data-large="original_image_path"
+        data-alt="image_alt">
+      </div>
+      ```
+
+      <br />
+
+      <Pilpil
+        width={3937}
+        height={2625}
+        small="https://cdn-images-1.medium.com/freeze/max/30/1*veE0CsrcA2x0NSKF3dzg4g.png?q=20"
+        large="https://cdn-images-1.medium.com/max/2000/1*veE0CsrcA2x0NSKF3dzg4g.png"
+        alt="Color canvas"
+        caption="Color canvas"
+      />
+
+      ## Why
+
+      It's the best way to load an image. No dependencies. Pure JavaScript. Progressive Image Loading with a blur effect. Reduce the page loading time. Better user experience. Wow.
+
+      <br />
+
+      ## Where
+
+      Pilpil should (in theory) work in all relevant browsers. If not, create an [issue](https://github.com/zafree/pilpil/issues)! Thanks!
+
+      <br />
+
+      ## Who
+
+      Written by <a href="http://zafree.github.io/">Zafree</a>, made better by you.
+
+      <Pilpil
+        width={2000}
+        height={1661}
+        small="https://cdn-images-1.medium.com/freeze/max/30/1*yPXod3TNMSRiFK0IeegFng.jpeg?q=20"
+        large="https://cdn-images-1.medium.com/max/2000/1*yPXod3TNMSRiFK0IeegFng.jpeg"
+        alt="Workstation"
+        caption="Rubik’s cube"
+      />
+    </Main>
+  </Row>
+</Content>
