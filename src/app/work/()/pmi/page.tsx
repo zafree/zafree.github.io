@@ -7,6 +7,7 @@ import { usePathname } from 'next/navigation'
 import HeroImage from '@/components/hero-image/HeroImage'
 import Pilpil from '@/components/pilpil/Pilpil'
 import PmiBangladesh from './PmiBangladesh.mdx'
+import Endorsement from '@/components/endorsements/Endorsement'
 
 function PagePilpil() {
   const url = usePathname()
@@ -25,6 +26,7 @@ function PagePilpil() {
         />
       </HeroImage>
       <PmiBangladesh />
+      <Endorsement load="shafiq" />
     </>
   )
 }
