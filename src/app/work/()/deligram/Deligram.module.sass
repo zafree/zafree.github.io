@@ -357,12 +357,17 @@ $LogoBlockColWidth-sm: 173px
       flex-direction: row-reverse
       justify-content: center
 
-  &__colLeft
-    max-width: 375px + $gutter
+  &__colLeft,
+  &__colRight
     margin-left: auto
     margin-right: auto
+    +laptop
+      margin-left: 0
+      margin-right: 0
+
+  &__colLeft
+    max-width: 375px + $gutter
     +tablet
-      // width: 470px
       margin-left: $gutter*2
       margin-right: 0
       margin-top: -15%
@@ -371,8 +376,6 @@ $LogoBlockColWidth-sm: 173px
       margin-top: -32%
   &__colRight
     max-width: 375px + $gutter
-    margin-left: auto
-    margin-right: auto
     +tablet
       margin-right: $gutter*2
     +laptop
