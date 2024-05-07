@@ -32,7 +32,7 @@ function Collage() {
                     width={410}
                     height={460}
                     small="/about/collage/sm-image1.jpg"
-                    large="/about/collage/image1@2x.jpg"
+                    large="/about/collage/image1.jpg"
                     alt="image"
                   />
                 </div>
@@ -41,7 +41,7 @@ function Collage() {
                     width={300}
                     height={626}
                     small="/about/collage/sm-image2.jpg"
-                    large="/about/collage/image2@2x.jpg"
+                    large="/about/collage/image2.jpg"
                     alt="image"
                   />
                 </div>
@@ -50,7 +50,7 @@ function Collage() {
                     width={300}
                     height={434}
                     small="/about/collage/sm-image3.jpg"
-                    large="/about/collage/image3@2x.jpg"
+                    large="/about/collage/image3.jpg"
                     alt="image"
                   />
                 </div>
@@ -59,7 +59,7 @@ function Collage() {
                     width={190}
                     height={460}
                     small="/about/collage/sm-image4.jpg"
-                    large="/about/collage/image4@2x.jpg"
+                    large="/about/collage/image4.jpg"
                     alt="image"
                   />
                 </div>
@@ -68,7 +68,7 @@ function Collage() {
                     width={370}
                     height={460}
                     small="/about/collage/sm-image5.jpg"
-                    large="/about/collage/image5@2x.jpg"
+                    large="/about/collage/image5.jpg"
                     alt="image"
                   />
                 </div>
