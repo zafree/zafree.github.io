@@ -1,6 +1,6 @@
 import s from './PastCollab.module.sass'
 import { getLogos } from '@/api/past-collab/getLogos'
-import Image from '@/components/pilpil/Pilpil'
+import Pilpil from '@/components/pilpil/Pilpil'
 
 function PastCollab() {
   const allLogos = getLogos()
@@ -22,8 +22,7 @@ function PastCollab() {
                     className={s.PastCollab__wrap}
                     style={{ width: logo.width + 'px' }}
                   >
-                    <Image
-                      className={s.PastCollab__image}
+                    <Pilpil
                       width={logo.width}
                       height={56}
                       small={`/past-collab/${logo.image}-small.jpg`}

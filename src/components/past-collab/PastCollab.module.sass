@@ -36,26 +36,27 @@
       max-width: none
 
   &__list
-    list-style: none
-    padding: 0
-    display: flex
+    +reset-list
+    display: inline-flex
     flex-direction: row
     flex-wrap: wrap
     justify-content: center
-    // margin-top: $gutter
+    margin-top: $gutter
     margin-left: -$gutter
     margin-right: -$gutter
+    margin-bottom: $gutter
     +tablet
       justify-content: flex-start
       margin-left: -$gutter * 1.5
       margin-right: -$gutter * 1.5
     +laptop
+      margin-bottom: $gutter * 2
   &__item
+    +reset-list
     position: relative
     padding: $gutter
     +tablet
       padding: $gutter * 1.5
-    +laptop
   &__wrap
     position: relative
   &__image

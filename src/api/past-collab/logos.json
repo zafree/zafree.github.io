@@ -1,45 +1,108 @@
 [
   {
     "status": true,
-    "id": 8,
+    "id": 17,
     "company": "Vision Sports Ventures, Inc.",
     "image": "upside",
     "width": 130
   },
   {
     "status": true,
-    "id": 7,
+    "id": 16,
     "company": "Daily Number, Inc.",
     "image": "real-time-rackets",
     "width": 102
   },
   {
     "status": true,
-    "id": 6,
+    "id": 15,
     "company": "Daily Number, Inc.",
     "image": "dailynumber",
     "width": 139
   },
   {
     "status": true,
-    "id": 5,
+    "id": 14,
     "company": "Deligram Technologies Limited",
     "image": "deligram",
     "width": 123
   },
   {
     "status": true,
-    "id": 4,
+    "id": 13,
+    "company": "Miniso Bangladesh",
+    "image": "miniso",
+    "width": 81
+  },
+  {
+    "status": true,
+    "id": 12,
+    "company": "Orderami",
+    "image": "orderami",
+    "width": 125
+  },
+  {
+    "status": true,
+    "id": 11,
+    "company": "PMI Bangladesh",
+    "image": "pmi",
+    "width": 142
+  },
+  {
+    "status": true,
+    "id": 10,
+    "company": "Walcart",
+    "image": "walcart",
+    "width": 144
+  },
+  {
+    "status": true,
+    "id": 9,
+    "company": "NCC Bank",
+    "image": "nccb",
+    "width": 150
+  },
+  {
+    "status": true,
+    "id": 8,
+    "company": "Authentic Food Cloud",
+    "image": "afc",
+    "width": 56
+  },
+  {
+    "status": true,
+    "id": 7,
+    "company": "Developer Conference 2020",
+    "image": "devcon",
+    "width": 84
+  },
+  {
+    "status": true,
+    "id": 6,
+    "company": "Angular Bangladesh Meetup 2019",
+    "image": "ngbd",
+    "width": 142
+  },
+  {
+    "status": true,
+    "id": 5,
     "company": "ThemeBucket",
     "image": "themebucket",
     "width": 161
   },
   {
     "status": true,
-    "id": 3,
+    "id": 4,
     "company": "Saifurs",
     "image": "saifurs",
     "width": 56
+  },
+  {
+    "status": true,
+    "id": 3,
+    "company": "Energypac",
+    "image": "energypac",
+    "width": 162
   },
   {
     "status": true,
