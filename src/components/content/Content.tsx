@@ -31,6 +31,7 @@ export function Main(props: IContent) {
     </>
   )
 }
+
 export function Left(props: IContent) {
   return (
     <>
@@ -46,6 +47,21 @@ export function Right(props: IContent) {
       <div className={s.Content__colRight}>
         <div className={s.Content__colRight__wrap}>{props.children}</div>
       </div>
+    </>
+  )
+}
+
+export function _row(props: IContent) {
+  return (
+    <>
+      <div className={s._row}>{props.children}</div>
+    </>
+  )
+}
+export function _col(props: IContent) {
+  return (
+    <>
+      <div className={s._row__col}>{props.children}</div>
     </>
   )
 }

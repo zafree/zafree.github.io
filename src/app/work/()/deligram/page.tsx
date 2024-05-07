@@ -14,6 +14,8 @@ import Intro from './intro.mdx'
 import Inprogress from '@/components/inprogress/Inprogress'
 import Endorsement from '@/components/endorsements/Endorsement'
 
+import DeligramPost from './Deligram'
+
 function Deligram() {
   const url = usePathname()
   const slug = url.substring(url.lastIndexOf('/') + 1)
@@ -31,8 +33,7 @@ function Deligram() {
         />
       </HeroImage>
       <Intro />
-      <Endorsement load="jituboss" />
-      <Inprogress />
+      <DeligramPost />
     </>
   )
 }

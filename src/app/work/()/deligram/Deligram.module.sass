@@ -1,140 +1,618 @@
 @import "@/styles/_config.sass"
 
-.TextBlock
-  position: relative
-  padding-top: $gutter*2
-  padding-bottom: $gutter*2
-  border: 1px solid red
+.Endorsement1
+  margin-top: $gutter*1.5
+  +tablet
+    margin-top: $tablet-gutter*1.5
   +laptop
-    padding-top: $gutter*5
-    padding-bottom: $gutter*5
+    margin-top: $laptop-gutter*1.5
+
+.Brand
+  // +space--lg
+  padding-top: $gutter
+  +tablet
+    padding-top: $tablet-gutter
+  +laptop
+    padding-top: $laptop-gutter
   &__container
     +container
 
+  &__logoBlock
+    border: 1px solid
+
+$LogoBlockColWidth: 345px
+$LogoBlockColWidth-sm: 173px
+
+.LogoBlock
   &__row
+    display: flex
+    flex-flow: row wrap
+    align-items: center
+    +laptop
+      padding-left: 10%
+      padding-right: 10%
+  &__col
+    flex: 1
+    &:not(:last-child)
+      margin-right: 4%
+      +tablet
+        margin-right: 10%
+    &:nth-child(1)
+      display: none
+      +tablet
+        display: block
+    .image
+      margin-bottom: 20%
+      &.half
+        width: 50%
+
+.LogoVideo
+  position: relative
+  margin-left: -$gutter
+  margin-right: -$gutter
+  margin-top: $gutter*2
+  +laptop
+    margin-left: 0
+    margin-right: 0
+    margin-top: $gutter*4
+  &__wrapper
     position: relative
-    margin-left: -$gutter*0.5
-    margin-right: -$gutter*0.5
+    padding-bottom: 125%
+    background-color: #783392
+    +tablet
+      padding-bottom: 56.25%
+    .AutoplayVideo
+      display: block
+      position: absolute
+      height: auto
+      width: 100%
+    .v1x
+      +tablet
+        display: none
+    .v2x
+      display: none
+      +tablet
+        display: block
+
+.Pallette
+  max-width: 1000px
+  margin-left: auto
+  margin-right: auto
+  +space--lg
+  &__inner
+    display: flex
+    flex-wrap: wrap
+    justify-content: center
+    +tablet
+      justify-content: space-around
+  &__colLeft
+    max-width: 40em
+    display: flex
+    flex-wrap: wrap
+    align-self: flex-start
+    justify-content: center
+    margin-bottom: 2em
+  &__colRight
+    max-width: 40em
+    display: flex
+    flex-wrap: wrap
+    justify-content: center
+    +tablet
+      margin-top: 10%
+
+  &__color,
+  &__colorsm
+    position: relative
+    &::before
+      +copy
+      +copy--xs
+      margin: 0
+      content: attr(data-color)
+      position: absolute
+      bottom: 10%
+      left: 0
+      right: 0
+      color: $white
+      text-align: center
+      text-transform: lowercase
+
+  &__color
+    width: 13em
+    padding-bottom: 83%
+    margin: 1em
+    border-radius: 500em
+    // width: 42%
+    // margin: 4%
+    // padding-bottom: 83%
+    // border-radius: 500em
+    // +tablet
+    //   width: 44%
+    //   margin: 3%
+  &__colorsm
+    width: 9em
+    padding-bottom: 50%
+    margin: 1em
+    border-radius: 500em
+    // width: 27.3333333%
+    // margin: 3%
+    // padding-bottom: 50%
+
+  &__caption
+    +copy
+    +copy--xs
+    color: $light
+    padding-left: 15px
+    padding-right: 15px
+    width: 100%
+    margin-top: 1em
+    text-align: center
+
+  .color
+    &783392
+      background-color: #783392
+    &FCBF14
+      background-color: #FCBF14
+      &::before
+        color: #1A1718
+    &EE395F
+      background-color: #EE395F
+    &41B468
+      background-color: #41B468
+    &74CDDA
+      background-color: #74CDDA
+    &1A1718
+      background-color: #1A1718
+    &515963
+      background-color: #515963
+    &CDD0D2
+      background-color: #CDD0D2
+      &::before
+        color: #1A1718
+
+// LetsStart
+
+.LetsStart
+  // padding-bottom: $gutter
+  // +laptop
+  //   padding-bottom: $gutter*2
+  &__heading
+    padding-top: $gutter*3.5
+    padding-bottom: $gutter
+    background-color: #1F1F1F
+    +laptop
+      padding-top: $gutter*6
+      padding-bottom: $gutter*2
+
+  &__imageContain
+    background-color: #1F1F1F
+    background-image: linear-gradient(#1F1F1F 90%, #f7f9fb 90%)
+    +laptop
+      background-image: linear-gradient(#1F1F1F 82%, #f7f9fb 82%)
+
+  &__container
+    +container
+
+  &__title
+    +heading
+    +heading--second
+    color: $white
+  &__subtitle
+    +subheading
+    +subheading--second
+    color: #B2B2B2
+    margin-bottom: .6em
+  &__copy
+    +copy
+    +copy--md
+    font-weight: 300
+    color: $lighter
+    max-width: 26em
+
+  &__row
+    margin-left: -$gutter
+    margin-right: -$gutter
+  &__imageBlockWrapper
+    display: flex
+    flex-direction: row
+    flex-wrap: wrap
+    max-width: 100%
+      // margin-top: -$gutter*0.5
+  &__imageBlock
+    width: 50%
+
+// Affix
+.Affix
+  padding-top: $gutter*2.5
+  padding-bottom: $gutter*2.5
+  background-color: #f9f9f9
+  +laptop
+    background-color: transparent
+    padding-top: $gutter*6
+    padding-bottom: $gutter*6
+
+  &__container
+    +container
+  &__inner
     +laptop
       display: flex
-      flex-direction: row
-      flex-wrap: wrap
-      align-items: stretch
-      justify-content: flex-start
+      align-items: flex-start
+      justify-content: space-between
+      &--reverse
+        flex-direction: row-reverse
 
-  &__colLeft
-    padding-bottom: 20px
-    padding-left: $gutter*0.5
-    padding-right: $gutter*0.5
+  &__content
+    padding-bottom: $gutter*1.5
+    +laptop
+      position: sticky
+      top: 0
+      padding-left: 0
+      padding-right: 15px
+      width: 50%
+      max-width: 520px
+      padding-top: $gutter*4
+  &__title
+    +heading
+    +heading--hero
+  &__subtitle
+    +subheading
+    +subheading--hero
+  &__copy
+    +copy
+    +copy--hero
+
+  &__sideImage
+    margin-left: auto
+    margin-right: auto
+    background-color: $niro
+    max-width: 520px + $gutter
+    padding: $gutter
     +laptop
       width: 50%
-      margin-left: 8.33333%
-      order: 2
-      padding-bottom: 0
+      margin-left: auto
+      margin-right: 0
 
-    // h4
-    //   +label-hero
-    // p
-    //   +copy-hero
+// Icons
+.DeligramIcon
+  margin-top: $gutter
+  +tablet
+    margin-top: $tablet-gutter
+  +laptop
+    margin-top: $laptop-gutter
+  &__container
+    +container
+  &__heading
+    border-top: 1px solid #ebebeb
+    +space--hero
 
-  &__colRight
-    padding-left: $gutter*0.5
-    padding-right: $gutter*0.5
+  &__title
+    +heading
+    +heading--second
+  &__subtitle
+    +subheading
+    +subheading--second
+    margin-bottom: .6em
+  &__copy
+    +copy
+    +copy--sm
+    max-width: 27em
+
+  &__row
+    +tablet
+      margin-left: -15px
+      margin-right: -15px
+  &__imageContain
+    +tablet
+      display: flex
+      max-width: 100%
+      margin-top: -$gutter*0.5
+  &__item
+    margin-bottom: $gutter*2
+    +tablet
+      width: 33.33%
+      padding: $gutter*0.5
+    p
+      +copy
+      +copy--xs
+      color: $light
+      margin-top: 1em
+      +tablet
+        margin-top: 2em
+
+// Pick
+.Show
+  $root: &
+
+  &__container
+    +container
+
+  &__heading
+    // border-top: 1px solid #ebebeb
+    padding-top: $gutter*2.5
+    padding-bottom: $gutter
     +laptop
-      width: 16.66667%
-      order: 1
+      padding-top: $gutter*6
+      padding-bottom: $gutter*2
 
-  // &__sideCopy
-  //   border-top: 1px solid #ebebeb
-  //   padding-top: 30px
+  &__content
+    max-width: 540px + $gutter
+    padding-right: $gutter
+
+  &__title
+    +heading
+    +heading--second
+  &__subtitle
+    +subheading
+    +subheading--second
+    margin-bottom: .6em
+  &__copy
+    +copy
+    +copy--md
+    max-width: 26em
+
+  &__row
+    +tablet
+      padding-top: $gutter*2
+      position: relative
+      display: flex
+      flex-direction: row-reverse
+      justify-content: center
+
+  &__colLeft
+    max-width: 375px + $gutter
+    margin-left: auto
+    margin-right: auto
+    +tablet
+      // width: 470px
+      margin-left: $gutter*2
+      margin-right: 0
+      margin-top: -15%
+    +laptop
+      width: 36.435%
+      margin-top: -32%
+  &__colRight
+    max-width: 375px + $gutter
+    margin-left: auto
+    margin-right: auto
+    +tablet
+      margin-right: $gutter*2
+    +laptop
+      width: 36.435%
+  &__item
+    margin-bottom: $gutter*2
+    +tablet
+      width: 100%
+      margin-bottom: $gutter*5
+
+  &__imageWrapper
+    padding: $gutter*0.5
+    // background-color: #f9f9f9
+    background-color: #252525
+    +tablet
+      padding: $gutter
+  &__videoAspectRatio
+    position: relative
+    padding-bottom: 197.333%
+    background-color: $white
+  &__video
+    position: absolute
+    top: 0
+    left: 0
+  &__caption
+    +copy
+    +copy--sm
+    color: $light
+
+  &.reverse
+    #{$root}__content
+      +tablet
+        margin-left: auto
+    #{$root}__row
+      flex-direction: row
+
+    #{$root}__colLeft
+      +tablet
+        // width: 470px
+        margin-right: $gutter*2
+        margin-left: 0
+    #{$root}__colRight
+      +tablet
+        margin-left: $gutter*2
+
+// Feelit
+.FeelIt
+  background-color: #262626
+
+  &__container
+    +container
+
+  &__heading
+    +space--hero
+
+  &__title
+    +heading
+    +heading--second
+    color: $white
+  &__subtitle
+    +subheading
+    +subheading--second
+  &__copy
+    +copy
+    +copy--hero
+    color: $lighter
+    font-weight: 300
+
+  &__rowOne
+    +tablet
+      display: flex
+      flex-wrap: wrap
+      flex-direction: row
+      align-items: flex-end
+      margin-left: -$gutter
+      margin-right: -$gutter
+  &__col1
+    +tablet
+      width: 62%
+      padding: $gutter
+  &__col2
+    // width: 55%
+    +tablet
+      width: 28%
+      padding: $gutter
+  &__imageBlock1
+    // border: 10px solid red
+    // margin-left: -$gutter*3
+    +tablet
+      margin-left: -$gutter*4
+      margin-bottom: $gutter*2
+  // &__imageBlock2
+
+  &__rowTwo
+    +tablet
+      display: flex
+      flex-wrap: wrap
+      flex-direction: row
+      margin-left: -$gutter
+      margin-right: -$gutter
+  &__colLeft
+    +tablet
+      width: 45%
+      padding: $gutter
+  &__colRight
+    +tablet
+      width: 53%
+      padding: $gutter
+  // &__col3
+  //   border: 1px sooid red
   //   +laptop
-  //     border-top: none
-  //     padding-top: 0
-  //   h5
-  //     font-size: 1.7em
-  //     letter-spacing: .025em
-  //     line-height: 1.66667
-  //     font-weight: 500
-  //     margin-top: .40832em
-  //     margin-bottom: 1em
-  //   p
-  //     +copy-read
-  //     line-height: 1.66667
-  //     margin-top: .40832em
-  //     font-weight: 400
-
-  //     a
-  //       font-weight: 500
-  //       text-decoration: underline
-
-  // // single col block 
-
-  // &__colBlock
-  //   padding-left: $gutter*0.5
-  //   padding-right: $gutter*0.5
+  //     // width: 45%
+  //     // padding: $gutter
+  // &__col4
   //   +laptop
-  //     width: 50%
-  //     margin-left: 25%
-  //   h2
-  //     +title-sm
-  //   h3
-  //     +subtitle-sm
-  //     margin-bottom: 1.13636em
-  //   h4
-  //     +label-hero
-  //   p
-  //     +copy-hero
-  //     a
-  //       &:hover
-  //         color: #2776ed
-  //         text-decoration: underline
+  //     // width: 53%
+  //     // padding: $gutter
+  &__imageBlock3
+    // margin-top: -$gutter*2
+    // margin-left: $gutter*5
+    +tablet
+      margin-top: -$gutter*2
+      margin-left: $gutter*5
+      margin-bottom: $gutter*2
+  &__imageBlock4
+    // margin-right: $gutter*3
+    +tablet
+      // margin-right: 0
+      margin-left: -$gutter*2
+  &__imageBlock5
+    +tablet
+      margin-bottom: $gutter*2
+  &__imageBlock6
+    +tablet
+      max-width: 362px
 
-  //   ul
-  //     list-style: circle outside
-  //     padding-left: $gutter*.75
-  //     li
-  //       font-size: 1.5em
-  //       letter-spacing: .025em
-  //       line-height: 1.55556
-  //       font-weight: 300
-  //       margin-bottom: 0.25em
-  //       +laptop
-  //         font-size: 2.1em
+  &__rowThree
+    +tablet
+      display: flex
+      flex-wrap: wrap
+      flex-direction: row
+      margin-left: -$gutter
+      margin-right: -$gutter
+  &__col7
+    +tablet
+      width: 100%
+      padding-left: $gutter
+      padding-right: $gutter
+      padding-top: $gutter
+  &__imageBlock7
+    margin-left: -$gutter
+    margin-right: -$gutter
+    +tablet
+      margin-left: $gutter*4
+      margin-right: $gutter*4
 
-  //       a
-  //         color: #2776ed
-  //         display: block
-  //         +laptop
-  //           display: inline
-  //   &--isRight
-  //     +laptop
-  //       margin-left: auto
+// News
+.ItsWorking
+  // padding-bottom: $gutter
+  +laptop
+    padding-bottom: $gutter*5
 
-  // // 
-  // &__siteLink
-  //   a
-  //     font-weight: 500
-  //     font-size: .75em
-  //     &:hover
-  //       color: #2776ed
+  // $root: &;
 
-  // &__imageBlock
-  //   margin-top: $gutter*2.5
-  //   +laptop
-  //     margin-top: $gutter*4
-  //   p
-  //     +copy-sm
-  //     padding-left: 15px
-  //     padding-right: 15px
-  //     display: block
-  //     width: 100%
-  //     margin-top: $gutter*2
-  //     text-align: center
+  &__container
+    +container
 
-  // .divider
-  //   border-top: 1px solid #ebebeb
-  //   margin-top: $gutter*3.5
-  //   margin-bottom: $gutter*3
-  //   +laptop
-  //     margin-top: $gutter*5
-  //     margin-bottom: $gutter*4
+  &__heading
+    border-top: 1px solid #ebebeb
+    padding-top: $gutter*2.5
+    padding-bottom: $gutter
+    margin-bottom: $gutter*2
+    +laptop
+      padding-top: $gutter*6
+      padding-bottom: $gutter*2
+      margin-bottom: 0
+
+  &__title
+    +heading
+    +heading--second
+  &__subtitle
+    +subheading
+    +subheading--second
+  &__copy
+    +copy
+    +copy--hero
+    max-width: 20em
+
+  &__row
+    display: flex
+    flex-direction: row
+    flex-wrap: wrap
+  &__col
+    width: 100%
+    margin-bottom: $gutter*4
+    +laptop
+      width: 50%
+      padding: $gutter*2
+      margin-bottom: 0
+
+  &__newsImage
+    margin-bottom: 2em
+    margin-left: 0
+  &__news
+    +copy
+    +copy--lg
+    margin-top: 1em
+    margin-bottom: 0.75em
+    color: inherit
+    &:first-child
+      &::before
+        content: "\201C"
+        margin-left: -.35em
+        margin-right: .1em
+    &:last-child
+      &::after
+        content: "\201D"
+    &:not(:first-child)
+      margin-top: 1em
+
+  &__footer
+    display: flex
+  &__cite
+    flex-grow: 0
+    flex-shrink: 1
+    flex-basis: auto
+    letter-spacing: .025em
+    margin-top: .75em
+  &__name,
+  &__role
+    +copy
+    +copy--xs
+    margin: 0
+    display: block
+    font-style: normal
+  &__name
+    font-size: 1.5em
+    font-weight: 500
+    text-decoration: none
+    padding-top: 0.25em
+    color: inherit
+  &__role
+    color: $gray

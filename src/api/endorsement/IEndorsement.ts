@@ -1,4 +1,5 @@
 export interface IEndorsement {
+  className?: string
   id?: number
   slug: string
   name?: string
