@@ -1,0 +1,45 @@
+import Content, { Row, Main, Left, Right, _row, _col } from '@/components/content/Content'
+import Pilpil from '@/components/pilpil/Pilpil'
+
+<Content>
+  <Row center>
+    <Main>
+      # Long story short
+      
+      [Shafiq bhai](https://www.linkedin.com/in/smshafiqul/) asked me to do a favor and provide a design proposal for their upcoming meetup. 
+      So, I created some quick visual shots and shared them with him. Unfortunately, they didn't like it much. 
+      End of story.
+
+      Here are some shots from the design:
+
+      <Pilpil
+        width={640}
+        height={480}
+        small={`/work/pmi/image1-small.jpg`}
+        large={`/work/pmi/image1.jpg`}
+        alt="image1"
+        caption="Spekers section"
+      />
+      <br />
+      <br />
+      <Pilpil
+        width={640}
+        height={480}
+        small={`/work/pmi/image2-small.jpg`}
+        large={`/work/pmi/image2.jpg`}
+        alt="image2"
+        caption="Mobile view"
+      />
+      <br />
+      <br />
+      <Pilpil
+        width={640}
+        height={480}
+        small={`/work/pmi/image3-small.jpg`}
+        large={`/work/pmi/image3.jpg`}
+        alt="image3"
+        caption="First landing"
+      />
+    </Main>
+  </Row>
+</Content>
