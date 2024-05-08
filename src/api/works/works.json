@@ -18,6 +18,14 @@
     "tags": ["CSS"]
   },
   {
+    "id": 18,
+    "slug": "angularbd",
+    "title": "Angular BD Meetup",
+    "subtitle": "ready-steady-ng",
+    "desc": "How to localize a global event?",
+    "tags": ["Design", "Development"]
+  },
+  {
     "id": 17,
     "slug": "deligram",
     "title": "Deligram",
