@@ -15,8 +15,8 @@ function LoremIpsum() {
     <>
       <Hero
         kicker={'Lorem ipsum'}
-        title={'Lorem ipsum'}
-        subtitle={'Words, mostly. By me, and myself.'}
+        title={'Words, mostly.'}
+        subtitle={'Written by me, and myself.'}
       />
       <Posts />
     </>

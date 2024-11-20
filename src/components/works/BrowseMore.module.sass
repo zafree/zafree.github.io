@@ -1,0 +1,23 @@
+@import '@/styles/_config.sass'
+
+.Section
+  position: relative
+  background-image: linear-gradient(lighten($lighter, 3%) 0%, $white 250px, $white 100%)
+  margin-top: $laptop-gutter
+  +space--sm
+
+.BrowseMore
+  position: relative
+  &__title
+    +heading
+    +heading--second
+    +space--sm
+  &__list
+    +reset-list
+    display: flex
+    flex-wrap: wrap
+  &__item
+    width: 42%
+    margin-bottom: 4%
+    &:not(:nth-child(2n))
+      margin-right: 8%

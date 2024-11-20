@@ -1,7 +1,7 @@
 [
   {
-    "done": true,
     "id": 32,
+    "date": "Jan 20, 2024",
     "slug": "react-locally",
     "title": "React Locally",
     "subtitle": "Create my own react starter kit",
@@ -9,8 +9,8 @@
     "tags": ["React"]
   },
   {
-    "done": true,
     "id": 19,
+    "date": "May 2, 2024",
     "slug": "fluid-typography",
     "title": "Fluid typography",
     "subtitle": "And, font-size: calc(vw + em)",
@@ -19,6 +19,7 @@
   },
   {
     "id": 12,
+    "date": "May 29, 2016",
     "slug": "pilpil",
     "title": "Pilpil.js",
     "subtitle": "Progressive Image Loading",

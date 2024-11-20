@@ -18,10 +18,10 @@ export default function Post({ params }: { params: { slug: string } }) {
   return (
     <>
       {/* <Hero title={work.title} subtitle={work.subtitle} /> */}
-      {/* <div>
+      <div>
         <h1>Title: {work.title}</h1>
         <h2>Desc: {work.desc}</h2>
-      </div> */}
+      </div>
     </>
   )
 }

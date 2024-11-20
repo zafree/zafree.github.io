@@ -1,0 +1,45 @@
+@import '@/styles/_config.sass'
+
+.About
+  position: relative
+  border-bottom: 1px solid $lighter
+  +space--sm
+  &__avatar
+    width: 7.2em
+    height: 7.2em
+    border-radius: 3.6em
+    background-color: $primary
+  &__titleWrap
+    display: flex
+    align-items: center
+    margin-top: 2em
+  &__name
+    +title
+    margin-top: 0
+  &__bio
+    +copy
+    +copy--base
+  &__hire
+    +reset-anchor
+    position: relative
+    display: inline-flex
+    align-items: center
+    font-weight: 500
+    text-transform: uppercase
+    +copy--xs
+    height: 2.2857142857em
+    // next
+    background-color: $primary
+    color: $white
+    padding-left: 1.1428571429em
+    padding-right: 1.1428571429em
+    border-radius: 1.1428571429em
+    transition: none $speed*3 ease
+    transition-property: background-color, width
+    margin-left: 1em
+    // +tablet
+    //   padding-left: 0.7142857143em
+    //   padding-right: 0.7142857143em
+    &:hover
+      text-decoration: none
+      background-color: darken($primary, 10%)

@@ -9,6 +9,7 @@ import HeroImage from '@/components/hero-image/HeroImage'
 import Pilpil from '@/components/pilpil/Pilpil'
 import Content, { Main, Row } from '@/components/content/Content'
 import s from './AngularBD.module.sass'
+import BrowseMore from '@/components/works/BrowseMore'
 
 function AngularBD() {
   const url = usePathname()
@@ -28,6 +29,7 @@ function AngularBD() {
         />
       </HeroImage>
       <Post />
+      <BrowseMore />
     </>
   )
 }
