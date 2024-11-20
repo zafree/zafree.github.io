@@ -19,8 +19,8 @@ function AngularBD() {
       <Hero title={work?.title as string} subtitle={work?.subtitle} />
       <HeroImage>
         <Pilpil
-          width={1280}
-          height={640}
+          width={1920}
+          height={959}
           small={`/work/${work?.slug}/cover-small.jpg`}
           large={`/work/${work?.slug}/cover.jpg`}
           alt={`${work?.title} cover image`}

@@ -1,5 +1,6 @@
 import { Metadata } from 'next'
 import Hero from '@/components/hero/Hero'
+import Posts from '@/components/posts/Posts'
 import Content, { Main, Row } from '@/components/content/Content'
 
 import Intro from './intro.mdx'
@@ -17,6 +18,7 @@ function LoremIpsum() {
         title={'Lorem ipsum'}
         subtitle={'Words, mostly. By me, and myself.'}
       />
+      <Posts />
     </>
   )
 }
