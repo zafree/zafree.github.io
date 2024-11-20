@@ -25,5 +25,14 @@
     "subtitle": "Progressive Image Loading",
     "desc": "A tiny JavaScript library for Progressive Image Loading.",
     "tags": ["JavaScript"]
+  },
+  {
+    "id": 1,
+    "date": "Oct 29, 2015",
+    "slug": "sticky-kit-problem",
+    "title": "Sticky-kit problem",
+    "subtitle": "How I fix it?",
+    "desc": "There is a problem in sticky-kit with bootstrap. I fixed it.",
+    "tags": ["JavaScript"]
   }
 ]
