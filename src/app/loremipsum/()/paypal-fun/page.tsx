@@ -7,7 +7,7 @@ import { usePathname } from 'next/navigation'
 import Post from './post.mdx'
 import ReadMore from '@/components/posts/ReadMore'
 
-function StickyKitProblem() {
+function PayPalFun() {
   const url = usePathname()
   const slug = url.substring(url.lastIndexOf('/') + 1)
   const post = getPostsSlug(slug)
@@ -20,4 +20,4 @@ function StickyKitProblem() {
   )
 }
 
-export default StickyKitProblem
+export default PayPalFun

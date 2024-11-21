@@ -1,0 +1,89 @@
+import Content, { Row, Main, Left, Right, _row, _col } from '@/components/content/Content'
+import EmbedCodePen from '@/components/embed-codepen/EmbedCodePen'
+import Image from '@/components/pilpil/Pilpil'
+import Link from 'next/link'
+
+<Content>
+  <Row center>
+    <Main>
+      # The story
+      The [CSS Zen Garden](https://csszengarden.com/) is a World Wide Web development resource 
+      built to demonstrate what can be accomplished visually through CSS-based design.
+      It launched in May 2003. Check the creator’s notes [here](https://daveshea.com/projects/zen/).
+
+      <br />
+
+      # How I got this challenge!
+      
+      While I was looking for a new role, [Shihan boss](https://www.linkedin.com/in/mnishihan/) 
+      invited me to his office to discuss an opportunity at Deligram. He proposed me to take the challenge, 
+      so he can test my designing ability before hiring me.
+
+      <br />
+
+
+      **The task is simple** — take the challenge. And let me tell you, there are already 
+      [216+ design](https://csszengarden.com/pages/alldesigns/) 
+      submissions from talented designers worldwide.
+
+      <Image
+        width={640}
+        height={640}
+        small="/loremipsum/css-zen-garden/image1-small.jpg"
+        large="/loremipsum/css-zen-garden/image1.jpg"
+        alt=""
+        caption="There are already 216+ design submissions from talented designers worldwide."
+      />
+
+      <br />
+
+      **The challenge rules** — were straightforward yet incredibly demanding:
+      - First submit a design.
+      - Write CSS to implement it.
+
+      **But here’s the twist** — I couldn’t change a single line of the HTML markup. 
+      All the magic had to happen with CSS alone, transforming the same static HTML into something entirely unique and visually stunning.
+    </Main>
+  </Row>
+  <Row center>
+    <Main>
+      --- 
+
+      # The design
+
+      As part of the process, I started by submitting my design concepts for mobile and 
+      desktop views, as per the discussion with Shihan bhai. After the design was reviewed 
+      and accepted, I began working on the CSS.
+
+      You can [check out](https://zafree.github.io/csszengarden/) the live version [here](https://zafree.github.io/csszengarden/).
+
+      Here’s the final design: 
+    </Main>
+  </Row>
+  <Row center>
+    <Main full>
+      <Image
+        width={1200}
+        height={600}
+        small="/loremipsum/css-zen-garden/thumb-small.jpg"
+        large="/loremipsum/css-zen-garden/thumb.jpg"
+        alt="My design"
+        caption={<Link href={`https://zafree.github.io/csszengarden/`} target='_blank'>My design</Link>}
+      />
+    </Main>
+  </Row>
+  <Row center>
+    <Main>
+      # Why this matters
+      
+      The CSS Zen Garden isn’t just a test of technical skill—it’s a creative challenge that pushes you to think outside the box. It taught me how to work within constraints while still delivering a beautiful and functional design.
+
+      --- 
+      
+      If you’re ready to push your skills or just want to explore creative design challenges like this, I’d love to hear from you!
+
+      Let me know if you’re stuck on anything or want to brainstorm design ideas together. Let’s make something amazing! 🚀
+      
+    </Main>
+  </Row>
+</Content>
