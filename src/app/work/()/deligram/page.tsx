@@ -15,6 +15,7 @@ import Inprogress from '@/components/inprogress/Inprogress'
 import Endorsement from '@/components/endorsements/Endorsement'
 
 import DeligramPost from './Deligram'
+import BrowseMore from '@/components/works/BrowseMore'
 
 function Deligram() {
   const url = usePathname()
@@ -34,6 +35,7 @@ function Deligram() {
       </HeroImage>
       <Intro />
       <DeligramPost />
+      <BrowseMore />
     </>
   )
 }

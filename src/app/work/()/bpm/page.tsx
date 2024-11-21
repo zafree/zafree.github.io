@@ -12,6 +12,7 @@ import WebDesign from './web-design.mdx'
 import BUBTAwesome from './bubt-awesome.mdx'
 import HeroImage from '@/components/hero-image/HeroImage'
 import Pilpil from '@/components/pilpil/Pilpil'
+import BrowseMore from '@/components/works/BrowseMore'
 
 function BPM() {
   const url = usePathname()
@@ -32,6 +33,7 @@ function BPM() {
       <Intro />
       <WebDesign />
       <BUBTAwesome />
+      <BrowseMore />
     </>
   )
 }

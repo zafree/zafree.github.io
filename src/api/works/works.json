@@ -24,12 +24,11 @@
     "tags": ["Design", "Proposal"]
   },
   {
-    "done": true,
     "id": 1,
     "slug": "bpm",
     "title": "BUBT Professional Meetup",
     "subtitle": "Want to be a part of something awesome?",
     "desc": "It’s the “Meetup” we all BUBTians wanted to attend.",
-    "tags": ["Community"]
+    "tags": ["Community", "Design", "Development"]
   }
 ]

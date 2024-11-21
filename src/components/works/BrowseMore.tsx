@@ -12,7 +12,7 @@ function BrowseMore() {
   function getRandomElement(list: any, item: number) {
     return [...list].sort(() => (Math.random() > 0.5 ? 1 : -1)).slice(0, item)
   }
-  const randomWork = getRandomElement(allWork, 4)
+  const randomWork = getRandomElement(allWork, 2)
   return (
     <div className={s.Section}>
       <Content>
@@ -22,7 +22,6 @@ function BrowseMore() {
           </Main>
         </Row>
       </Content>
-      {/* list */}
       <Content>
         <Row center>
           <Main full>
