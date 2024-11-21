@@ -2,33 +2,33 @@
 
 import React from 'react'
 import Hero from '@/components/hero/Hero'
-import { getWorksSlug } from '@/api/works/getWorks'
+import { getPostsSlug } from '@/api/posts/getPosts'
 import { usePathname } from 'next/navigation'
 import HeroImage from '@/components/hero-image/HeroImage'
 import Pilpil from '@/components/pilpil/Pilpil'
 import PmiBangladesh from './PmiBangladesh.mdx'
 import Endorsement from '@/components/endorsements/Endorsement'
-import BrowseMore from '@/components/works/BrowseMore'
+import ReadMore from '@/components/posts/ReadMore'
 
 function PagePilpil() {
   const url = usePathname()
   const slug = url.substring(url.lastIndexOf('/') + 1)
-  const work = getWorksSlug(slug)
+  const post = getPostsSlug(slug)
   return (
     <>
-      <Hero title={work?.title as string} subtitle={work?.subtitle} />
+      <Hero title={post?.title as string} subtitle={post?.subtitle} />
       <HeroImage>
         <Pilpil
           width={1280}
           height={640}
-          small={`/work/${work?.slug}/small-thumb.jpg`}
-          large={`/work/${work?.slug}/cover.jpg`}
-          alt={`${work?.title} cover image`}
+          small={`/loremipsum/${post?.slug}/small-thumb.jpg`}
+          large={`/loremipsum/${post?.slug}/cover.jpg`}
+          alt={`${post?.title} cover image`}
         />
       </HeroImage>
       <PmiBangladesh />
-      <Endorsement load="shafiq" />
-      <BrowseMore />
+      {/* <Endorsement load="shafiq" /> */}
+      <ReadMore />
     </>
   )
 }

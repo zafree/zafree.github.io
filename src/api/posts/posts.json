@@ -18,6 +18,15 @@
     "tags": ["CSS"]
   },
   {
+    "id": 13,
+    "date": "September 13, 2021",
+    "slug": "pmi",
+    "title": "PMI Bangladesh",
+    "subtitle": "Meetup landing page proposal",
+    "desc": "A meetup landing page proposal",
+    "tags": ["Design", "Proposal"]
+  },
+  {
     "id": 12,
     "date": "May 29, 2016",
     "slug": "pilpil",
@@ -27,22 +36,31 @@
     "tags": ["JavaScript"]
   },
   {
-    "id": 4,
+    "id": 5,
     "date": "October 17, 2017",
     "slug": "paypal-fun",
     "title": "PayPal Fun",
     "subtitle": "How I Welcome PayPal to Bangladesh",
     "desc": "How I Welcome PayPal in Bangladesh.",
-    "tags": ["CSS"]
+    "tags": ["CSS", "JavaScript"]
   },
   {
-    "id": 3,
+    "id": 4,
     "date": "April 20, 2017",
     "slug": "css-zen-garden",
     "title": "CSS Zen Garden",
     "subtitle": "The beauty of CSS design challenge",
     "desc": "A friendly CSS design challenge by recruiter before hiring me.",
     "tags": ["Design"]
+  },
+  {
+    "id": 3,
+    "date": "April 20, 2016",
+    "slug": "bpm",
+    "title": "BUBT Professional Meetup",
+    "subtitle": "Want to be a part of something awesome?",
+    "desc": "It’s the “Meetup” we all BUBTians wanted to attend.",
+    "tags": ["Community", "Design", "Development"]
   },
   {
     "id": 2,

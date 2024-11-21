@@ -14,21 +14,5 @@
     "subtitle": "A full e-commerce site",
     "desc": "A full e-commerce site",
     "tags": ["Product", "Design", "Development"]
-  },
-  {
-    "id": 5,
-    "slug": "pmi",
-    "title": "PMI Bangladesh",
-    "subtitle": "Meetup landing page proposal",
-    "desc": "A meetup landing page proposal",
-    "tags": ["Design", "Proposal"]
-  },
-  {
-    "id": 1,
-    "slug": "bpm",
-    "title": "BUBT Professional Meetup",
-    "subtitle": "Want to be a part of something awesome?",
-    "desc": "It’s the “Meetup” we all BUBTians wanted to attend.",
-    "tags": ["Community", "Design", "Development"]
   }
 ]
