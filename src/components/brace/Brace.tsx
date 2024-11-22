@@ -12,7 +12,17 @@ if (typeof window !== 'undefined') {
 import s from './Brace.module.sass'
 function Brace() {
   useGSAP(() => {
-    const words = ['love', 'dig', 'know', 'do', 'fucking love']
+    const words = [
+      'love',
+      'dig',
+      'implement',
+      'do',
+      'engineer',
+      'eat',
+      'breathe',
+      'develop',
+      'fucking love',
+    ]
     let tlMaster = gsap.timeline({ repeat: -1 })
     words.forEach((word) => {
       let tl = gsap.timeline({ repeat: 1, yoyo: true, repeatDelay: 2 })
