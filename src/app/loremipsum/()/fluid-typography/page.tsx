@@ -30,7 +30,7 @@ function FluidTypography() {
           </Main>
         </Row>
       </Content>
-      <ReadMore slug={slug} />
+      <ReadMore />
     </>
   )
 }

@@ -15,7 +15,7 @@ function StickyKitProblem() {
     <>
       <Hero title={post?.title as string} subtitle={post?.subtitle} />
       <Post />
-      <ReadMore slug={slug} />
+      <ReadMore />
     </>
   )
 }

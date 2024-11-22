@@ -17,7 +17,7 @@ function ThemeBucketLogo() {
       <Hero title={post?.title as string} subtitle={post?.subtitle} />
       <Post />
       {/* <EmbedCodePen author="zafree" slug="MJGzER" /> */}
-      <ReadMore slug={slug} />
+      <ReadMore />
     </>
   )
 }

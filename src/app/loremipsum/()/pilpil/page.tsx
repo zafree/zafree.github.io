@@ -19,7 +19,7 @@ function PagePilpil() {
     <>
       <Hero title={post?.title as string} subtitle={post?.subtitle} />
       <ReadMe />
-      <ReadMore slug={slug} />
+      <ReadMore />
     </>
   )
 }

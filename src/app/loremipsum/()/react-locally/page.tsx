@@ -41,7 +41,7 @@ function ReactLocally() {
           </Main>
         </Row>
       </Content>
-      <ReadMore slug={slug} />
+      <ReadMore />
     </>
   )
 }
