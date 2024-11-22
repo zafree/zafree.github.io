@@ -1,0 +1,36 @@
+@import "@/styles/_config.sass"
+
+.video
+  position: relative
+  box-shadow: 0 16px 32px 0 rgba($black, .1)
+  &__aspectRatio
+    padding-bottom: 75%
+    background-color: #CAE7D5
+  &__video
+    position: absolute
+    top: 0
+    left: 0
+    bottom: 0
+    right: 0
+
+.demo
+  position: relative
+  display: flex
+  flex-flow: row wrap
+  &__link
+    +reset-anchor
+    display: block
+    width: 80px
+    margin-right: 2.5em
+    // margin-bottom: 3em
+    &.more
+      +copy
+      +copy--base
+      height: 80px
+      margin: 0
+      border-radius: 50em
+      border: 1px solid #ddd
+      display: inline-flex
+      justify-content: center
+      align-items: center
+      color: #757575

@@ -3,16 +3,15 @@ import s from './BrowseMore.module.sass'
 import Link from 'next/link'
 import Content, { Row, Main, Left, Right } from '@/components/content/Content'
 
-import { getWorks } from '@/api/works/getWorks'
+import { getMoreWorks } from '@/api/works/getWorks'
 import WorkItem from './WorkItem'
 import About from '../footer/About'
+import { usePathname } from 'next/navigation'
 
 function BrowseMore() {
-  let allWork = getWorks()
-  function getRandomElement(list: any, item: number) {
-    return [...list].sort(() => (Math.random() > 0.5 ? 1 : -1)).slice(0, item)
-  }
-  const randomWork = getRandomElement(allWork, 2)
+  let url = usePathname()
+  let slug = url.substring(url.lastIndexOf('/') + 1)
+  let moreWorks = getMoreWorks(slug)
   return (
     <div className={s.Section}>
       <Content>
@@ -28,7 +27,7 @@ function BrowseMore() {
             <div className={s.BrowseMore}>
               <h3 className={s.BrowseMore__title}>Browse more</h3>
               <ul className={s.BrowseMore__list}>
-                {randomWork.map((work) => (
+                {moreWorks.map((work) => (
                   <li key={work.slug} className={s.BrowseMore__item}>
                     <WorkItem {...work} />
                   </li>

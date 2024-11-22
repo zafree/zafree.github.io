@@ -1,11 +1,21 @@
 import React from 'react'
 import s from './About.module.sass'
 import Link from 'next/link'
+import Pilpil from '../pilpil/Pilpil'
 
 function About() {
   return (
     <div className={s.About}>
-      <div className={s.About__avatar}></div>
+      <div className={s.About__avatar}>
+        <Pilpil
+          width={300}
+          height={300}
+          small="/endorsement/zafree-small.jpg"
+          large="/endorsement/zafree.jpg"
+          alt="Tabaq"
+          caption="Tabaq"
+        />
+      </div>
 
       <div className={s.About__titleWrap}>
         <h5 className={s.About__name}>Zafree, available for hire</h5>

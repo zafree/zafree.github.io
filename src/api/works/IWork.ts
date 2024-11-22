@@ -1,5 +1,6 @@
 export interface IWork {
   done?: boolean
+  mp4?: boolean
   id: number
   slug: string
   image?: string
