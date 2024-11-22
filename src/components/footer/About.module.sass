@@ -22,12 +22,12 @@
     +copy--base
   &__hire
     +reset-anchor
+    +copy--xs
     position: relative
     display: inline-flex
     align-items: center
     font-weight: 500
     text-transform: uppercase
-    +copy--xs
     height: 2.2857142857em
     // next
     background-color: $primary
@@ -38,9 +38,7 @@
     transition: none $speed*3 ease
     transition-property: background-color, width
     margin-left: 1em
-    // +tablet
-    //   padding-left: 0.7142857143em
-    //   padding-right: 0.7142857143em
+    white-space: nowrap
     &:hover
       text-decoration: none
       background-color: darken($primary, 10%)
