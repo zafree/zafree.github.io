@@ -1,23 +1,100 @@
 import Content, { Row, Main, Left, Right, _row, _col } from '@/components/content/Content'
 import Pilpil from '@/components/pilpil/Pilpil'
 
+<_row>
+  <_col>
+    <Pilpil
+      width={2000}
+      height={1446}
+      small="https://cdn-images-1.medium.com/freeze/max/30/1*_ASVxMQ2WFospoTZ22MDnw.jpeg?q=20"
+      large="https://cdn-images-1.medium.com/max/2000/1*_ASVxMQ2WFospoTZ22MDnw.jpeg"
+      alt="Workstation"
+    />
+  </_col>
+  <_col>
+    <Pilpil
+      width={2000}
+      height={1334}
+      small="https://cdn-images-1.medium.com/freeze/max/30/1*veE0CsrcA2x0NSKF3dzg4g.png?q=20"
+      large="https://cdn-images-1.medium.com/max/2000/1*veE0CsrcA2x0NSKF3dzg4g.png"
+      alt="Color canvas"
+    />
+  </_col>
+  <_col>
+    <Pilpil
+      width={2000}
+      height={1661}
+      small="https://cdn-images-1.medium.com/freeze/max/30/1*yPXod3TNMSRiFK0IeegFng.jpeg?q=20"
+      large="https://cdn-images-1.medium.com/max/2000/1*yPXod3TNMSRiFK0IeegFng.jpeg"
+      alt="Rubik’s cube"
+    />
+  </_col>
+</_row>
+
 <Content>
   <Row center>
     <Main>
-      For prograssive image loading, I write pilpil.js. 
+
+      <br />
+      <br />
+
+      Have you noticed how images load on my website? If not, refresh the page and take a look. 
+      Pay attention to those three large images — they load instantly, right?
+
+      <br />
+
+      ## The story behind pilpil.js
+
+      Back in 2015, I first noticed how [Medium](https://medium.design/image-zoom-on-medium-24d146fc0c20) 
+      smoothly loads their images. The seamless experience left me wondering — how do they 
+      do it? I was fascinated by the way they managed large images without causing any 
+      noticeable lag.
+
+      I couldn’t let it go. So, I started digging into the techniques and algorithms behind image loading. 
+      After months of experimenting, I created [`pilpil.js`](https://github.com/zafree/pilpil) — a library 
+      designed to help load large images quickly and efficiently, just like what I saw on Medium.
+
+      The name [`Pilpil`](https://github.com/zafree/pilpil) comes from **Progressive Image Loading** *(PIL)*. I repeated it twice — 
+      [`Pil + Pil = Pilpil`](https://github.com/zafree/pilpil) — because I liked how it sounded and wanted to highlight the process.
       
-      But remember always, pilpil.js doesn't save you in real world. 
-      Image you provide is too high. 
-      You have to optimize it. I can show you how can you do it manually.
+      Pilpil.js uses advanced techniques to load images smoothly, improving user experience and 
+      reducing load times. It’s simple, yet effective, and it's now part of how I optimize 
+      my websites!
 
-      First check these pictue I loaded form medium cdn. 
+      ---
 
-      Save them locally and check the size:
+      ## Why pilpil.js matters
+
+      It's the best way to load an image. 
+      
+      * No dependencies. Pure JavaScript.
+      * Progressive image loading with a blur effect. 
+      * Reduce page loading time. 
+      * Better user experience. 
+      * Wow.
+
+      [Give it a try](https://github.com/zafree/pilpil) on your website and see the difference!
+
+      ---
+
+      # Bonus tips
+
+      However, keep in mind that [`pilpil.js`](https://github.com/zafree/pilpil) doesn’t save 
+      you in the real world — image optimization starts with how you save your images.
+
+      You need to make sure your images are properly optimized before you even load 
+      them on your site. I’ll show you how you can optimize them manually!
+
+      Below, I’ve provided three image sources:
+
+      * ~`cdn-medium` 
+      * ~`figma`
+      * ~`adobe-photoshop`
+
+      Take a look at the size differences between them! The smaller the image file, the faster your image will load.
     </Main>
   </Row>
-</Content>
-
-<Content>
+  
   <Row center>
     <Main full>
       <_row>
@@ -35,20 +112,20 @@ import Pilpil from '@/components/pilpil/Pilpil'
           <Pilpil
             width={2000}
             height={1446}
-            small="/work/pilpil/image1-small.jpeg"
-            large="/work/pilpil/image1-figma.jpg"
+            small="/loremipsum/pilpil/image1-figma-small.jpg"
+            large="/loremipsum/pilpil/image1-figma.jpg"
             alt="Workstation"
-            caption="1.01 MB ~ figma"
+            caption="1.07 MB ~ figma"
           />
         </_col>
         <_col>
           <Pilpil
             width={2000}
             height={1446}
-            small="/work/pilpil/image1-small.jpeg"
-            large="/work/pilpil/image1-figma.jpg"
+            small="/loremipsum/pilpil/image1-photoshop-small.jpg"
+            large="/loremipsum/pilpil/image1-photoshop.jpg"
             alt="Workstation"
-            caption=" ~ adobe"
+            caption="97.48 KB ~ adobe"
           />
         </_col>
       </_row>
@@ -68,20 +145,20 @@ import Pilpil from '@/components/pilpil/Pilpil'
           <Pilpil
             width={2000}
             height={1334}
-            small="/work/pilpil/image2-small.jpeg"
-            large="/work/pilpil/image2-figma.jpg"
+            small="/loremipsum/pilpil/image2-figma-small.png"
+            large="/loremipsum/pilpil/image2-figma.png"
             alt="Color canvas"
-            caption="3.88 MB ~ figma"
+            caption="3.50 MB ~ figma"
           />
         </_col>
         <_col>
           <Pilpil
             width={2000}
             height={1334}
-            small="/work/pilpil/image2-small.jpeg"
-            large="/work/pilpil/image2-figma.jpg"
+            small="/loremipsum/pilpil/image2-photoshop-small.jpg"
+            large="/loremipsum/pilpil/image2-photoshop.jpg"
             alt="Color canvas"
-            caption="~ adobe"
+            caption="365.66 KB ~ adobe"
           />
         </_col>
       </_row>
@@ -101,8 +178,8 @@ import Pilpil from '@/components/pilpil/Pilpil'
           <Pilpil
             width={2000}
             height={1661}
-            small="/work/pilpil/image3-small.jpeg"
-            large="/work/pilpil/image3-figma.jpg"
+            small="/loremipsum/pilpil/image3-figma-small.jpg"
+            large="/loremipsum/pilpil/image3-figma.jpg"
             alt="Rubik’s cube"
             caption="436.35 KB ~ figma"
           />
@@ -111,13 +188,30 @@ import Pilpil from '@/components/pilpil/Pilpil'
           <Pilpil
             width={2000}
             height={1661}
-            small="/work/pilpil/image3-small.jpeg"
-            large="/work/pilpil/image3-figma.jpg"
+            small="/loremipsum/pilpil/image3-photoshop-small.jpg"
+            large="/loremipsum/pilpil/image3-photoshop.jpg"
             alt="Rubik’s cube"
-            caption=" ~ adobe"
+            caption="122.11 KB ~ adobe"
           />
         </_col>
       </_row>
+    </Main>
+  </Row>
+</Content>
+
+<Content>
+  <Row center>
+    <Main>
+
+    # Final thoughts
+
+    [`pilpil.js`](https://github.com/zafree/pilpil) makes image loading smooth, 
+    but proper image optimization is key for fast websites. If you need help with 
+    pilpil.js or optimizing your images, feel 
+    free to [reach out](mailto:zafree@live.com) — I’m happy to help!
+
+    And if you like [`pilpil.js`](https://github.com/zafree/pilpil), 
+    a star on the [GitHub repo](https://github.com/zafree/pilpil) is much appreciated!
     </Main>
   </Row>
 </Content>
