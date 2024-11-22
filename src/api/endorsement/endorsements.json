@@ -1,18 +1,17 @@
 [
+  
   {
-    "id": 8,
-    "slug": "tareq",
-    "name": "Mohammad Tareq Aziz",
-    "url": "https://www.linkedin.com/in/mtaziz/",
+    "id": 1,
+    "slug": "shipu",
+    "name": "Shipu Ahamed",
+    "url": "https://www.linkedin.com/in/toshipu/",
     "role": [
-      "Senior Software Engineer, Dynamic Solution Innovators Ltd"
+      "Lead Backend Engineer, GM, 10 Minute School"
     ],
     "copies": [
-      "He brings energy to the team with his unique sense of humor. <mark>Zafree is undoubtedly the best digital product designer in Bangladesh.</mark> His superb UX sense, extreme skill sets in UI prototyping tools, deeper understanding of front-end technologies make him a true unicorn of the industry.",
-      "He’s always the most proactive guy and ready to do whatever necessary to get things done. He even resolves the blocker issues of his teammates so that it doesn’t hinder productivity.",
-      "If I get the opportunity to work with him again, I’ll gladly accept the offer without thinking twice."
+      "I am very lucky to be able to work with him. <mark>One of the best UI and UX engineers I have ever met.</mark> In a word, his design sense is remarkable. His every initiative is commendable. I think he is a very good leader, suitable for startups, supportive team player and a good minded person. I never want to miss out on another opportunity to work with him."
     ],
-    "short": "<mark>Zafree is undoubtedly the best digital product designer in Bangladesh.</mark> His superb UX sense, extreme skill sets in UI prototyping tools, deeper understanding of front-end technologies make him a true unicorn of the industry."
+    "short": "I am very lucky to be able to work with him. <mark>One of the best UI and UX engineers I have ever met.</mark> In a word, his design sense is remarkable."
   },
   {
     "id": 7,
@@ -62,6 +61,21 @@
     "short": "<mark>Zafree is excellent in understanding customer needs and designing product appropriately using excellent UX sense.</mark>  He is very dedicated to the company and always takes ownership of anything which is beneficial to the company even that is beyond his role."
   },
   {
+    "id": 8,
+    "slug": "tareq",
+    "name": "Mohammad Tareq Aziz",
+    "url": "https://www.linkedin.com/in/mtaziz/",
+    "role": [
+      "Senior Software Engineer, Dynamic Solution Innovators Ltd"
+    ],
+    "copies": [
+      "He brings energy to the team with his unique sense of humor. <mark>Zafree is undoubtedly the best digital product designer in Bangladesh.</mark> His superb UX sense, extreme skill sets in UI prototyping tools, deeper understanding of front-end technologies make him a true unicorn of the industry.",
+      "He’s always the most proactive guy and ready to do whatever necessary to get things done. He even resolves the blocker issues of his teammates so that it doesn’t hinder productivity.",
+      "If I get the opportunity to work with him again, I’ll gladly accept the offer without thinking twice."
+    ],
+    "short": "<mark>Zafree is undoubtedly the best digital product designer in Bangladesh.</mark> His superb UX sense, extreme skill sets in UI prototyping tools, deeper understanding of front-end technologies make him a true unicorn of the industry."
+  },
+  {
     "id": 4,
     "slug": "adnan",
     "name": "Adnan Ahmed Khan",
@@ -101,18 +115,5 @@
       "I met Zafree several times and worked with him once. He asked for 1 version of the Angular Bangladesh logo, I delivered 9 versions real quick and then he choosed one. <mark>Working with him is simple, seamless, professional and peaceful!</mark>"
     ],
     "short": "I met Zafree several times and worked with him once. <mark>Working with him is simple, seamless, professional and peaceful!</mark>"
-  },
-  {
-    "id": 1,
-    "slug": "shipu",
-    "name": "Shipu Ahamed",
-    "url": "https://www.linkedin.com/in/toshipu/",
-    "role": [
-      "Lead Backend Engineer, GM, 10 Minute School"
-    ],
-    "copies": [
-      "I am very lucky to be able to work with him. <mark>One of the best UI and UX engineers I have ever met.</mark> In a word, his design sense is remarkable. His every initiative is commendable. I think he is a very good leader, suitable for startups, supportive team player and a good minded person. I never want to miss out on another opportunity to work with him."
-    ],
-    "short": "I am very lucky to be able to work with him. <mark>One of the best UI and UX engineers I have ever met.</mark> In a word, his design sense is remarkable."
   }
 ]
