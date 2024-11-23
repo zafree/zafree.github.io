@@ -24,7 +24,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <GoogleAnalytics gaId="G-WHMPP1NQK9" />
       <body className={c(sans.variable, serif.variable)}>
         <AppLayout>
           <Header>
@@ -40,6 +39,7 @@ export default function RootLayout({
           <Footer />
         </AppLayout>
       </body>
+      <GoogleAnalytics gaId="G-WHMPP1NQK9" />
     </html>
   )
 }

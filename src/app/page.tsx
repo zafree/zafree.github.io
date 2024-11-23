@@ -6,9 +6,12 @@ import PastCollab from '@/components/past-collab/PastCollab'
 import Endorsement, {
   MoreEndorsement,
 } from '@/components/endorsements/Endorsement'
+import { GoogleAnalytics } from '@next/third-parties/google'
+
 function Home() {
   return (
     <>
+      <GoogleAnalytics gaId="G-WHMPP1NQK9" />
       <Hero
         title="Independent Design Engineer"
         subtitle="Hi, I’m Zafree, and I specialize in design, and design implementation."
