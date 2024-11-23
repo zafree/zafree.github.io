@@ -6,7 +6,7 @@ import Content, { Main, Row } from '@/components/content/Content'
 import Intro from './intro.mdx'
 
 export const metadata: Metadata = {
-  title: 'Lorem ipsum by Zafree.',
+  title: 'Blog. Zafree.',
   description: '',
 }
 
