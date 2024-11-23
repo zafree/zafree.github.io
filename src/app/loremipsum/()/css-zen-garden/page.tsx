@@ -8,6 +8,7 @@ import HeroImage from '@/components/hero-image/HeroImage'
 import Pilpil from '@/components/pilpil/Pilpil'
 import Post from './post.mdx'
 import ReadMore from '@/components/posts/ReadMore'
+import Link from 'next/link'
 
 function CSSZenGarden() {
   const url = usePathname()
@@ -16,6 +17,15 @@ function CSSZenGarden() {
   return (
     <>
       <Hero title={post?.title as string} subtitle={post?.subtitle} />
+      <HeroImage>
+        <Pilpil
+          width={1920}
+          height={789}
+          small="/loremipsum/css-zen-garden/cover-small.jpg"
+          large="/loremipsum/css-zen-garden/cover.jpg"
+          alt="Cover"
+        />
+      </HeroImage>
       <Post />
       <ReadMore />
     </>
