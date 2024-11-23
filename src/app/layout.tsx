@@ -4,6 +4,7 @@ import Header from '@/components/header/Header'
 import Navigation from '@/components/navigation/Navigation'
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import { GoogleAnalytics } from '@next/third-parties/google'
 
 import './layout.sass'
 
@@ -12,7 +13,7 @@ import c from 'classnames'
 import Footer from '@/components/footer/Footer'
 
 export const metadata: Metadata = {
-  title: 'Zafree',
+  title: 'Zafree. Independent Design Engineer.',
   description: '',
 }
 
@@ -23,6 +24,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <GoogleAnalytics gaId="G-WHMPP1NQK9" />
       <body className={c(sans.variable, serif.variable)}>
         <AppLayout>
           <Header>
