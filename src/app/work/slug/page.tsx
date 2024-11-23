@@ -1,6 +1,5 @@
 import { notFound } from 'next/navigation'
 import { getWorks } from '@/api/works/getWorks'
-import { GoogleAnalytics } from '@next/third-parties/google'
 
 export async function generateStaticParams() {
   let allWork = getWorks()
@@ -18,7 +17,6 @@ export default function Post({ params }: { params: { slug: string } }) {
   }
   return (
     <>
-      <GoogleAnalytics gaId="G-WHMPP1NQK9" />
       {/* <Hero title={work.title} subtitle={work.subtitle} /> */}
       {/* <div>
         <h1>Title: {work.title}</h1>
