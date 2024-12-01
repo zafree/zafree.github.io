@@ -1,18 +1,4 @@
 [
-  
-  {
-    "id": 1,
-    "slug": "shipu",
-    "name": "Shipu Ahamed",
-    "url": "https://www.linkedin.com/in/toshipu/",
-    "role": [
-      "Lead Backend Engineer, GM, 10 Minute School"
-    ],
-    "copies": [
-      "I am very lucky to be able to work with him. <mark>One of the best UI and UX engineers I have ever met.</mark> In a word, his design sense is remarkable. His every initiative is commendable. I think he is a very good leader, suitable for startups, supportive team player and a good minded person. I never want to miss out on another opportunity to work with him."
-    ],
-    "short": "I am very lucky to be able to work with him. <mark>One of the best UI and UX engineers I have ever met.</mark> In a word, his design sense is remarkable."
-  },
   {
     "id": 7,
     "slug": "tonu",
@@ -115,5 +101,18 @@
       "I met Zafree several times and worked with him once. He asked for 1 version of the Angular Bangladesh logo, I delivered 9 versions real quick and then he choosed one. <mark>Working with him is simple, seamless, professional and peaceful!</mark>"
     ],
     "short": "I met Zafree several times and worked with him once. <mark>Working with him is simple, seamless, professional and peaceful!</mark>"
+  },
+  {
+    "id": 1,
+    "slug": "shipu",
+    "name": "Shipu Ahamed",
+    "url": "https://www.linkedin.com/in/toshipu/",
+    "role": [
+      "Lead Backend Engineer, GM, 10 Minute School"
+    ],
+    "copies": [
+      "I am very lucky to be able to work with him. <mark>One of the best UI and UX engineers I have ever met.</mark> In a word, his design sense is remarkable. His every initiative is commendable. I think he is a very good leader, suitable for startups, supportive team player and a good minded person. I never want to miss out on another opportunity to work with him."
+    ],
+    "short": "I am very lucky to be able to work with him. <mark>One of the best UI and UX engineers I have ever met.</mark> In a word, his design sense is remarkable."
   }
 ]
